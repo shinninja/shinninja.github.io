@@ -80,12 +80,13 @@ body {
         text-decoration: none;
       }
       &:first-child {margin-left:0;}
-    }
 
-    a:before {content:"";display:inline-block;width:16px;height:16px;background-repeat:no-repeat;background-position:0 0;background-size:100%;}
-    a:nth-child(1):before {background-image:url('/images/icon/icon_prj.png');}
-    a:nth-child(2):before {background-image:url('/images/icon/icon_archive.png');}
-    a:nth-child(3):before {background-image:url('/images/icon/icon_github.png');}
+      &:before {content:"";display:inline-block;width:16px;height:16px;background-repeat:no-repeat;background-position:0 0;background-size:100%;}
+      &:nth-child(1):before {background-image:url('/images/icon/icon_prj.png');}
+      &:nth-child(2):before {background-image:url('/images/icon/icon_archive.png');}
+      &:nth-child(3):before {background-image:url('/images/icon/icon_github.png');}
+    }
+    
   }
 }
 
