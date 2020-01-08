@@ -58,14 +58,20 @@ body {
   }
 
   &-nav {
+    position:absolute;
+    top:0;
+    right:1rem;
+    transform:translateY(-50%);
+
     a {
       position:relative;
+      display:inline-block;
       color: $oc-gray-7;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
          -moz-transition: all .2s ease;
               transition: all .2s ease;
-      margin-right: .3rem;
+      margin-left:20px;
       font-size: 0;
 
       &:hover,
@@ -73,10 +79,13 @@ body {
         color: $oc-gray-7;
         text-decoration: none;
       }
+      &:first-child {margin-left:0;}
     }
 
-    a:before {content:"";width:16px;height:16px;}
-    a:nth-child(1) {}
+    a:before {content:"";width:16px;height:16px;background-repeat:no-repeat;background-position:0 0;background-size:100%;}
+    a:nth-child(1) {background-image:url('/images/icon/icon_prj.png');}
+    a:nth-child(2) {background-image:url('/images/icon/icon_archive.png');}
+    a:nth-child(3) {background-image:url('/images/icon/icon_github.png');}
   }
 }
 
