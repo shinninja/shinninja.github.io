@@ -98,7 +98,7 @@ body {
   text-transform: uppercase;
 
   a {
-    color: $base-color;
+    color: $base-color;font-family:'Cormorant',Courier,serif;
 
     &:hover,
     &:focus {
@@ -388,7 +388,11 @@ body {
       &-essentials {
         flex:1;
 
-        .name {font-size:20px;font-weight:bold;color:#444;}
+        picture {display:block;overflow:hidden;width:80px;height:80px;margin:0 auto;border-radius:50%;
+          img {position:relative;top:-10px;left:0;}
+        }
+
+        .name {font-size:20px;font-weight:bold;color:#444;text-align:center;}
       }
 
       &-info {flex:2;padding:20px 30px;border-left:1px solid #eee;}
@@ -397,9 +401,8 @@ body {
         dt {font-size:13px;font-weight:bold;text-transform:uppercase;color:#999;}
 
         &-list {
-          &:after {clear:both;display:block;content:"";}
           li {
-            float:left;margin-left:20px;
+            display:inline-block;margin-left:4px;padding:6px 8px;color:#444;border:1px solid #ddd;border-radius:4px;font-size:12px;
 
             &:first-child {margin-left:0;}
           }
