@@ -79,7 +79,7 @@ h6 {
 
 p {
   color: $text-color;
-  margin: 0 0 1rem;
+  margin: 0;
   line-height: 1.7em;
 }
 
@@ -88,10 +88,7 @@ p {
   -------------- */
 
 //  Reset list
-ol, 
-ul,
-dl,
-li {
+ol, ul, dl, dt, dd, li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -142,7 +139,7 @@ ol {
 ol, 
 ul {
   > li {
-    margin: 0 auto $li-bottom-space $li-bullets-width;
+    margin: 0;
     line-height: $li-line-height;
     
     > ol,
@@ -314,7 +311,7 @@ pre code {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 0;
   border-radius: 5px;
 }
 
