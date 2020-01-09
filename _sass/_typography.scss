@@ -90,38 +90,39 @@ p {
 //  Reset list
 ol, 
 ul,
-dl {
-  margin: 0 0 1em;
+dl,
+li {
+  margin: 0;
   padding: 0;
   list-style: none;
   list-style-image: none;
 }
 
 //  Positioning Bullets
-ol, 
-ul {
-  > li {
-    &:before {
-      position: absolute;
-      width: $li-bullets-width;
-      margin-left: -$li-bullets-width;
-      display: inline-block;
-      box-sizing: border-box;
-      text-align: right;
-    }
-  }
-}
+// ol, 
+// ul {
+//   > li {
+//     &:before {
+//       position: absolute;
+//       width: $li-bullets-width;
+//       margin-left: -$li-bullets-width;
+//       display: inline-block;
+//       box-sizing: border-box;
+//       text-align: right;
+//     }
+//   }
+// }
 
 // Restyle <ul>
-ul {
-  > li:before {
-    content: "\2022";
-    padding-right: $ul-bullets-right-space;
-    font-family: $ul-bullets-font;
-    font-size: $ul-bullets-font-size;
-    line-height: $ul-bullets-font-line-height;
-  }
-}
+// ul {
+//   > li:before {
+//     content: "\2022";
+//     padding-right: $ul-bullets-right-space;
+//     font-family: $ul-bullets-font;
+//     font-size: $ul-bullets-font-size;
+//     line-height: $ul-bullets-font-line-height;
+//   }
+// }
 
 // Restyle <ol>
 ol {
@@ -161,29 +162,7 @@ li {
   }
 }
 
-dt {
-  float: left;
-  width: $dt-width;
-  overflow: auto;
-  clear: left;
-  text-align: right;
-  white-space: nowrap;
-  font-weight: bold;
-  margin-bottom: $li-bottom-space;
 
-  @media (max-width: 38rem){
-    width: 120px;
-  }
-}
-
-dd {
-  margin-left: $dd-position;
-  margin-bottom: $li-bottom-space;
-
-  @media (max-width: 38rem){
-    margin-left: 140px;
-  }
-}
 
 /*--------------
   

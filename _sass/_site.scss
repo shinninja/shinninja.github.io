@@ -381,27 +381,33 @@ body {
 /*--------------
   Projects
   -------------- */
-  .profile {
-    border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,0.07);-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.07);
-    
-    &-essentials .name {font-size:20px;font-weight:bold;color:#444;}
+  .project {
+    .profile {
+      display:flex;flex-wrap:wrap;border-radius:6px;border:1px solid #eee;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);
+      
+      &-essentials {
+        flex:1;
 
-    &-info {padding:20px 30px;border-left:1px solid #eee;}
+        .name {font-size:20px;font-weight:bold;color:#444;}
+      }
 
-    &-skills {
-      dt {font-size:13px;font-weight:bold;text-transform:uppercase;color:#999;}
+      &-info {flex:2;padding:20px 30px;border-left:1px solid #eee;}
 
-      &-list {
-        &:after {clear:both;display:block;content:"";}
-        li {
-          float:left;margin-left:20px;
+      &-skills {
+        dt {font-size:13px;font-weight:bold;text-transform:uppercase;color:#999;}
 
-          &:first-child {margin-left:0;}
+        &-list {
+          &:after {clear:both;display:block;content:"";}
+          li {
+            float:left;margin-left:20px;
+
+            &:first-child {margin-left:0;}
+          }
+          .logo {width:60px;height:60px;}
         }
-        .logo {width:60px;height:60px;}
       }
     }
-  }
+ }
 
 
 /*--------------
