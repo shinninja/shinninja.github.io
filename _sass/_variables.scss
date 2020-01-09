@@ -3,7 +3,7 @@
 /*--------------
   Font
   -------------- */
-$base-font: 'Spoqa Han Sans', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+$base-font: 'Noto Sans KR', 'Haas Grot Text R Web', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
 $code-font: Menlo, 'Ubuntu Mono', Monaco, 'Spoqa Han Sans', monospace;
 $code-gist-font: Menlo, 'Ubuntu Mono', Monaco, 'Spoqa Han Sans', monospace;
 
@@ -55,4 +55,10 @@ $li-child-size-ratio: 0.95;
 
 $dt-width: 180px;
 $dt-dd-space: 20px;
-$dd-position: $dt-width+$dt-dd-space
+$dd-position: $dt-width+$dt-dd-space;
+
+
+/*--------------
+  Border
+  -------------- */
+$border-gray-1: 1px solid #eee;

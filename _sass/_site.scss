@@ -385,7 +385,7 @@ body {
   -------------- */
   .project {
     .profile {
-      display:flex;flex-wrap:wrap;border-radius:6px;border:1px solid #eee;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);
+      display:flex;flex-wrap:wrap;border-radius:6px;border:$border-gray-1;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);
       
       &-essentials {
         flex:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;padding:20px 0;
@@ -394,10 +394,10 @@ body {
           img {position:relative;top:-10px;left:0;}
         }
 
-        .name {font-size:20px;font-family:'Haas Grot Text R Web';font-weight:bold;color:$oc-gray-7;}
+        .name {font-size:20px;font-weight:bold;color:$oc-gray-7;}
       }
 
-      &-info {flex:2;padding:20px 30px;border-left:1px solid #eee;}
+      &-info {flex:2;padding:20px 30px;border-left:$border-gray-1;}
 
       &-skills {
         dt {margin-bottom:10px;font-size:13px;font-weight:bold;text-transform:uppercase;color:$oc-gray-5;}
@@ -414,19 +414,19 @@ body {
     }
 
     &-cont {
-      overflow:hidden;
+      overflow:hidden;margin-top:30px;
 
       &-list {
-        display:flex;flex-wrap:wrap;margin-top:-10px;
+        display:flex;flex-wrap:wrap;margin:-10px -5px 0;
 
         li {
           overflow:hidden;display:flex;flex-basis:50%;margin-top:10px;padding:0 5px;box-sizing:border-box;
 
-          .box {display:flex;flex-wrap:wrap;padding:15px;width:100%;border:1px solid #ccc;box-sizing:border-box;align-items:center;}
+          .box {display:flex;flex-wrap:wrap;padding:15px;width:100%;box-sizing:border-box;align-items:center;border:$border-gray-1;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);}
           .img {flex:1;}
           .discrip {flex:3;padding:10px 20px;word-break:keep-all;}
           .discrip > p {line-height:1.5;}
-          .discrip .name {margin-bottom:5px;font-weight:bold;font-size:14px;}
+          .discrip .name {margin-bottom:5px;font-weight:bold;font-size:$base-font-size-sm;font-family:'Noto Serif KR';}
         }
       }
     }
