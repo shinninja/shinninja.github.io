@@ -3,6 +3,7 @@ layout: page
 title: Projects
 ---
 <div class="project">
+  <!-- ST : profile -->
   <div class="profile">
     <div class="profile-essentials">
       <div class="profile-essentials-inner">
@@ -34,26 +35,440 @@ title: Projects
       </dl>
     </div>
   </div>
-  <div class="project-list">
-  {% if site.posts.size == 0 %}
-    <h2>No post found</h2>
-  {% else %}
-  {% for post in site.posts %}
-    <div class="archive-list-post">
-      {% if post.link %}
-      <a href="{{ post.link }}">
-      {% else %}
-      <a href="{{ post.url | prepend: site.baseurl }}">
-      {% endif %}  
-        <span class="archive-list-post-title">
-          {{ post.title }}
-        </span>
-        <span class="archive-list-post-date">
-          <time>| {{ post.date | date_to_string }}</time>
-        </span>
-      </a>
-    </div>
-  {% endfor %}
-  {% endif %}
+  <!-- EN : profile -->
+
+  <!-- ST : project-cont -->
+  <div class="project-cont">
+    <ul class="project-cont-list">
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/himart.png" alt="하이마트" /></div>
+          <div class="discrip">
+            <p class="name">롯데 하이마트 운영</p>
+            <p>WEB, MOBILE, OMNI, KIOSK</p>
+            <p>2018.03.26 ~ 현재</p>
+            <p>HTML5, CSS3, jQuery, sub PL</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_samsung.png" alt="삼성" /></div>
+          <div class="discrip">
+            <p class="name">삼성 보안 솔루션 리뉴얼 - NASCA, SCORT</p>
+            <p>WEB</p>
+            <p>2017.12.01 ~ 2018.02.28</p>
+            <p>HTML5, CSS3</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_cj.png"  alt="CJ" /></div>
+          <div class="discrip">
+            <p class="name">CJ 테이블 오더 구축</p>
+            <p>TABLET</p>
+            <p>2017.11.01 ~ 2017.11.28</p>
+            <p>HTML5, CSS3, jQuery, PL</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_samsung.png" alt="삼성" /></div>
+          <div class="discrip">
+            <p class="name">삼성 Global ERP - Smart Material Management 구축</p>
+            <p>MOBILE</p>
+            <p>2017.08.16 ~ 2017.10.31</p>
+            <p>HTML5, CSS3</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_shinhan.jpg" alt="신한금융투자" /></div>
+          <div class="discrip">
+            <p class="name">신한금융투자 운영</p>
+            <p>신한금융투자 홈페이지 WEB, MOBILE / Scatch / Scatch 펀드 / 퇴직연금</p>
+            <p>2015.12.01 ~ 2017.04.28</p>
+            <p>HTML5, CSS3, jQuery, PL</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_samsung.png" alt="삼성" /></div>
+          <div class="discrip">
+            <p class="name">삼성 SDS CCM(City Control Manager) 해외 판매 관제 솔루션 구축</p>
+            <p>WEB</p>
+            <p>2015.07.22 ~ 2015.11.23</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_sc.jpg" alt="SC제일은행" /></div>
+          <div class="discrip">
+            <p class="name">SC제일은행 Korea retail workbench 리뉴얼</p>
+            <p>TABLET</p>
+            <p>2015.02.23 ~ 2015.06.18</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_FS.png" alt="펀드슈퍼마켓" /></div>
+          <div class="discrip">
+            <p class="name">펀드슈퍼마켓 고도화 및 리뉴얼</p>
+            <p>WEB, MOBILE</p>
+            <p>2015.01.05 ~ 2015.02.17</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_canon.jpg" alt="캐논코리아" /></div>
+          <div class="discrip">
+            <p class="name">캐논코리아 컨슈머 이미징 홈페이지 리뉴얼</p>
+            <p>WEB</p>
+            <p>2014.10.06 ~ 2014.12.31</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_11st.jpg" alt="11번가" /></div>
+          <div class="discrip">
+            <p class="name">11번가 운영</p>
+            <p>WEB</p>
+            <p>2014.03.12 ~ 2014.09.03</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_acebed.png" alt="에이스침대" /></div>
+          <div class="discrip">
+            <p class="name">에이스침대 구축</p>
+            <p>WEB, MOBILE</p>
+            <p>2014.02.10 ~ 2014.03.11</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_SCatch.png" alt="신한은행 SCatch 펀드" /></div>
+          <div class="discrip">
+            <p class="name">신한은행 SCatch 펀드 구축</p>
+            <p>WEB</p>
+            <p>2014.01.06 ~ 2014.02.07</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_bmwmini.jpg" alt="BMW MINI" /></div>
+          <div class="discrip">
+            <p class="name">BMW MINI 블로그 신규 및 운영</p>
+            <p>WEB, BLOG</p>
+            <p>2013.10.01 ~ 2013.12.27</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_kia.png" alt="기아자동차" /></div>
+          <div class="discrip">
+            <p class="name">기아자동차 국문 유지보수</p>
+            <p>WEB, 접근성</p>
+            <p>2011.10.03 ~ 2013.08.23</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_lohbs.png" alt="롯데H&B(Lohbs)" /></div>
+          <div class="discrip">
+            <p class="name">롯데H&B(Lohbs) 구축</p>
+            <p>WEB, MOBILE, 웹 접근성 마크 획득</p>
+            <p>2013.05.27 ~ 2013.06.27</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_group.jpg" alt="현대자동차 그룹" /></div>
+          <div class="discrip">
+            <p class="name">[현대자동차 그룹] 현대,기아 통합방송 사이트 구축</p>
+            <p>WEB</p>
+            <p>2012.12.07 ~ 2013.02.15</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_group.jpg" alt="현대자동차 그룹" /></div>
+          <div class="discrip">
+            <p class="name">[현대자동차 그룹] 현대그룹포털 모바일 구축</p>
+            <p>MOBILE</p>
+            <p>2012.09.03 ~ 2012.12.05</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_mobis.jpg" alt="현대모비스" /></div>
+          <div class="discrip">
+            <p class="name">[현대모비스] 액튠 마이크로 사이트 구축</p>
+            <p>WEB</p>
+            <p>2012.09.07 ~ 2012.10.18</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_glovis.jpg" alt="현대글로비스" /></div>
+          <div class="discrip">
+            <p class="name">[현대글로비스/해외법인] 해외법인 구축</p>
+            <p>Responsive WEB</p>
+            <p>2012.06.15 ~ 2012.09.07</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_ksa.png" alt="KSA" /></div>
+          <div class="discrip">
+            <p class="name">KSA커뮤니티 유지보수</p>
+            <p>WEB</p>
+            <p>2012.04.20 ~ 2012.07.30</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_mobis.jpg" alt="현대모비스" /></div>
+          <div class="discrip">
+            <p class="name">[현대모비스] 모비스/모비스존 유지보수</p>
+            <p>WEB(국문, 영문, 일문, 사이버역사관, 엠카페, 베스핏츠, 모비스존)</p>
+            <p>2011.06.13 ~ 2012.07.30</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD.jpg" alt="현대" /></div>
+          <div class="discrip">
+            <p class="name">[AD현대] 제네시스 쿠페, 프라다 유지보수</p>
+            <p>WEB, MOBILE</p>
+            <p>2012.02.24 ~ 2012.07.10</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_ksa.png" alt="KSA" /></div>
+          <div class="discrip">
+            <p class="name">[KSA] KSA커뮤니티 구축</p>
+            <p>WEB, MOBILE</p>
+            <p>2012.02.27 ~ 2012.04.20</p>
+            <p>HTML, CSS, jQuery</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_GU.jpg" alt="어린이재단" /></div>
+          <div class="discrip">
+            <p class="name">어린이재단 리뉴얼 및 유지보수</p>
+            <p>WEB(홈페이지, 캠페인, 후원, 국내/해외사업, 재단소개, 인재채용)</p>
+            <p>2011.09.06 ~ 2012.04.20</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_glovis.jpg" alt="현대글로비스" /></div>
+          <div class="discrip">
+            <p class="name">[글로비스] 업무포털 기능개선</p>
+            <p>WEB</p>
+            <p>2011.06.20 ~ 2011.11.25</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD.jpg" alt="현대" /></div>
+          <div class="discrip">
+            <p class="name">[AD현대] 제네시스 쿠페 모바일 구축</p>
+            <p>MOBILE</p>
+            <p>2011.11.02 ~ 2011.11.15</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD.jpg" alt="현대" /></div>
+          <div class="discrip">
+            <p class="name">[현대자동차] 로보카폴리 구축</p>
+            <p>WEB</p>
+            <p>2011.07.20 ~ 2011.08.26</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="img"><img src="/images/project/logo_HD_power.jpg" alt="현대파워텍" /></div>
+          <div class="discrip">
+            <p class="name">[현대파워텍] 현대파워텍 유지보수</p>
+            <p>WEB</p>
+            <p>2011.06.13 ~ 2011.07.04</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">[종로학평] 종로학평 유지보수</p>
+            <p>WEB</p>
+            <p>2011.06.13 ~ 2011.06.30</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">던롭타이어-모바일 구축</p>
+            <p>MOBILE</p>
+            <p>2011.05.13 ~ 2011.05.20</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">희귀질환 구축</p>
+            <p>WEB</p>
+            <p>2011.04.21 ~ 2011.05.28</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">PIS어학원 유지보수</p>
+            <p>WEB</p>
+            <p>2011.04.04 ~ 2011.06.07</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">던롭타이어-홈페이지 구축</p>
+            <p>WEB</p>
+            <p>2011.03.29 ~ 2011.05.06</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">위즈네트 유지보수</p>
+            <p>WEB(국문,영문,쇼핑몰)</p>
+            <p>2011.03.21 ~ 2011.05.31</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">렘넌트에듀 구축</p>
+            <p>WEB</p>
+            <p>2011.03.01 ~ 2011.04.26</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">아름다운달 유지보수</p>
+            <p>WEB</p>
+            <p>2011.02.01 ~ 2011.05.31</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">스킨푸드LMS 유지보수</p>
+            <p>WEB</p>
+            <p>2011.02.01 ~ 2011.05.31</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">동진무역출판사 구축</p>
+            <p>WEB</p>
+            <p>2010.09.15 ~ 2010.12.10</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="discrip">
+            <p class="name">유니바이오테크 홈페이지 구축</p>
+            <p>WEB</p>
+            <p>2010.06.21 ~ 2010.09.30</p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>
+      <!--<li>
+        <div class="box">
+          <div class="img"><img src="" /></div>
+          <div class="discrip">
+            <p class="name"></p>
+            <p>WEB</p>
+            <p></p>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </li>-->
+    </ul>
   </div>
 </div>
