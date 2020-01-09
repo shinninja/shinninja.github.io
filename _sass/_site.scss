@@ -98,7 +98,7 @@ body {
   text-transform: uppercase;
 
   a {
-    color: $base-color;font-family:'Cormorant',Courier,serif;
+    color: $base-color;font-family:'Cormorant',Courier,serif;letter-spacing:5px;
 
     &:hover,
     &:focus {
@@ -119,7 +119,7 @@ body {
     line-height: 1.2em;
     font-weight: 600;
     text-transform:uppercase;
-    letter-spacing:10px;
+    letter-spacing:2px;
   }
 }
 
@@ -422,11 +422,11 @@ body {
         li {
           overflow:hidden;display:flex;flex-basis:50%;margin-top:10px;padding:0 5px;box-sizing:border-box;
 
-          .box {display:flex;flex-wrap:wrap;padding:15px;width:100%;box-sizing:border-box;align-items:center;border:$border-gray-1;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);}
+          .box {display:flex;flex-wrap:wrap;padding:15px;width:100%;box-sizing:border-box;align-items:center;border:$border-gray-1;box-shadow:0 2px 1px rgba(0,0,0,0.07);-webkit-box-shadow:0 2px 1px rgba(0,0,0,0.07);}
           .img {flex:1;}
           .discrip {flex:3;padding:10px 20px;word-break:keep-all;}
-          .discrip > p {line-height:1.5;}
-          .discrip .name {margin-bottom:5px;font-weight:bold;font-size:$base-font-size-sm;font-family:'Noto Serif KR';}
+          .discrip > p {line-height:1.5;font-size:$base-font-size-s;color:$oc-gray-5;}
+          .discrip .name {margin-bottom:5px;font-weight:bold;font-size:$base-font-size-sm;}
         }
       }
     }
