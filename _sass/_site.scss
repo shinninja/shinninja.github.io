@@ -406,7 +406,7 @@ body {
     }
 
     &-section {
-      padding:0 20px;border-left:2px solid #4fba6f;box-shadow:-2px 0px 0px 0px rgba(24,228,33,0.22)l-webkit-box-shadow:-2px 0px 0px 0px rgba(24,228,33,0.22);
+      padding:0 20px;border-left:2px solid #4fba6f;box-shadow:-2px 0px 0px 0px rgba(24,228,33,0.22);-webkit-box-shadow:-2px 0px 0px 0px rgba(24,228,33,0.22);
 
       h3 {margin-bottom:10px;font-size:27px;font-weight:bold;text-transform:uppercase;color:$oc-gray-7;}
 
