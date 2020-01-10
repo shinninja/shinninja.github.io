@@ -406,7 +406,14 @@ body {
         .name {font-size:20px;font-weight:bold;color:$oc-gray-7;}
       }
 
-      &-info {flex:2;padding:20px 30px;border-left:$border-gray-1;}
+      &-info {
+        flex:2;padding:20px 30px;border-left:$border-gray-1;
+
+        &-list {
+          .ico {font-size:0;background-repeat:no-repeat;background-size:100%;background-position:0 0;}
+          .ico-email {width:10px;background-image:url(../images/icon/icon_email.png);}
+        }
+      }
     }
 
     &-section {
