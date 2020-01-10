@@ -410,8 +410,9 @@ body {
         flex:2;padding:20px 30px;border-left:$border-gray-1;
 
         &-list {
-          .ico {font-size:0;background-repeat:no-repeat;background-size:100%;background-position:0 0;}
-          .ico-email {width:10px;background-image:url(../images/icon/icon_email.png);}
+          .ico {position:relative;font-size:0;}
+          .ico:before {background-repeat:no-repeat;background-size:contain;background-position:0 0;}
+          .ico-email:before {width:10px;background-image:url(/images/icon/icon_email.png);}
         }
       }
     }
