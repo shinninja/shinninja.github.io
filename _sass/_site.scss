@@ -411,7 +411,7 @@ body {
 
         &-list {
           .ico {position:relative;font-size:0;}
-          .ico:before {background-repeat:no-repeat;background-size:contain;background-position:0 0;}
+          .ico:before {content:"";display:inline-block;background-repeat:no-repeat;background-size:contain;background-position:0 0;}
           .ico-email:before {width:10px;background-image:url(/images/icon/icon_email.png);}
         }
       }
