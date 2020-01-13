@@ -36,6 +36,7 @@ a {
   Header
   -------------- */
 h1, h2, h3, h4, h5, h6 {
+  margin:0;
   font-weight: 600;
 }
 
@@ -90,30 +91,30 @@ ol, ul, dl, dt, dd, li {
 }
 
 //  Positioning Bullets
-ol, 
-ul {
-  > li {
-    &:before {
-      position: absolute;
-      width: $li-bullets-width;
-      margin-left: -$li-bullets-width;
-      display: inline-block;
-      box-sizing: border-box;
-      text-align: right;
-    }
-  }
-}
+// ol, 
+// ul {
+//   > li {
+//     &:before {
+//       position: absolute;
+//       width: $li-bullets-width;
+//       margin-left: -$li-bullets-width;
+//       display: inline-block;
+//       box-sizing: border-box;
+//       text-align: right;
+//     }
+//   }
+// }
 
 // Restyle <ul>
-ul {
-  > li:before {
-    content: "\2022";
-    padding-right: $ul-bullets-right-space;
-    font-family: $ul-bullets-font;
-    font-size: $ul-bullets-font-size;
-    line-height: $ul-bullets-font-line-height;
-  }
-}
+// ul {
+//   > li:before {
+//     content: "\2022";
+//     padding-right: $ul-bullets-right-space;
+//     font-family: $ul-bullets-font;
+//     font-size: $ul-bullets-font-size;
+//     line-height: $ul-bullets-font-line-height;
+//   }
+// }
 
 // Restyle <ol>
 ol {

@@ -137,6 +137,77 @@ body {
   Post
   -------------- */
 .post {
+  h2 {padding-top: 0.3em;padding-bottom: 0.3em;}
+  ol, ul, dl {margin: 0 0 1em;}
+
+  ol, 
+  ul {
+    > li {
+      margin: 0 auto $li-bottom-space $li-bullets-width;
+      line-height: $li-line-height;
+  
+      > ol,
+      > ul {
+        margin-top: $li-bottom-space;
+      }
+
+      &:before {
+        position: absolute;
+        width: $li-bullets-width;
+        margin-left: -$li-bullets-width;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: right;
+      }
+    }
+  }
+
+  ul {
+    > li:before {
+      content: "\2022";
+      padding-right: $ul-bullets-right-space;
+      font-family: $ul-bullets-font;
+      font-size: $ul-bullets-font-size;
+      line-height: $ul-bullets-font-line-height;
+    }
+  }
+
+  li {
+    > ol,
+    > ul {
+      > li {
+        font-size: ($li-child-size-ratio * 1em);
+        margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+      }
+    }
+  }
+
+  dt {
+    float: left;
+    width: $dt-width;
+    overflow: auto;
+    clear: left;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: $li-bottom-space;
+  
+    @media (max-width: 38rem){
+      width: 120px;
+    }
+  }
+  
+  dd {
+    margin-left: $dd-position;
+    margin-bottom: $li-bottom-space;
+  
+    @media (max-width: 38rem){
+      margin-left: 140px;
+    }
+  }
+
+  p {margin: 0 0 1rem;}
+  
 
   &-title {
     margin-top: 0rem;
@@ -393,7 +464,6 @@ body {
   about
   -------------- */
   .about {
-    h3 {margin:0;} 
     &-profile {
       display:flex;flex-wrap:wrap;border-radius:6px;border:$border-gray-1;box-shadow:1px 1px 1px rgba(0,0,0,0.07);-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.07);
       
