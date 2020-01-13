@@ -137,8 +137,8 @@ body {
   Post
   -------------- */
 .post {
-  h2 {padding-top: 0.3em;padding-bottom: 0.3em;}
-  ol, ul, dl {margin: 0 0 1em;}
+  h2 {padding:10px 0;margin:26px 0;border-bottom:1px solid #eee;}
+  ol, ul, dl {margin-bottom:18px;}
 
   ol, 
   ul {
@@ -152,7 +152,16 @@ body {
         margin-top: $li-bottom-space;
       }
 
-      &:before {content:"";position:absolute;top:8px;left:-20px;width:7px;height:7px;background:#343a40;}
+      &:before {
+        content:"";
+        position:absolute;
+        top:8px;
+        left:-20px;
+        width:7px;
+        height:7px;
+        background:#343a40;
+        border-radius:50%;
+      }
     }
   }
 
@@ -190,7 +199,7 @@ body {
     }
   }
 
-  p {margin: 0 0 1rem;}
+  p {margin-bottom:18px;}
   
 
   &-title {
