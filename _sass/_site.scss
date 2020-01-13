@@ -143,6 +143,7 @@ body {
   ol, 
   ul {
     > li {
+      position:relative;
       margin: 0 auto $li-bottom-space $li-bullets-width;
       line-height: $li-line-height;
   
@@ -151,24 +152,7 @@ body {
         margin-top: $li-bottom-space;
       }
 
-      &:before {
-        position: absolute;
-        width: $li-bullets-width;
-        margin-left: -$li-bullets-width;
-        display: inline-block;
-        box-sizing: border-box;
-        text-align: right;
-      }
-    }
-  }
-
-  ul {
-    > li:before {
-      content: "\2022";
-      padding-right: $ul-bullets-right-space;
-      font-family: $ul-bullets-font;
-      font-size: $ul-bullets-font-size;
-      line-height: $ul-bullets-font-line-height;
+      &:before {content:"";position:absolute;top:8px;left:-20px;width:7px;height:7px;background:#343a40;}
     }
   }
 
@@ -228,9 +212,7 @@ body {
     margin-bottom: 1.5rem;
 
     ul {
-      li:before {
-        content: ""
-      }
+      li:before {display:none;}
 
       li {
         margin: 0;
