@@ -35,7 +35,6 @@ document.write('result : ' + sum(1,2,3,4));
 </script>
 ```
 
-[ 실행결과 ]
 <script>
 function sum(){
     var i, _sum = 0;
@@ -47,6 +46,7 @@ function sum(){
 }
 document.write('result : ' + sum(1,2,3,4));
 </script>
+
 
 * 위 코드에서 arguments는 약속되어있는 유사 배열이 담긴다. <br>
   arguments안에는 사용자가 전달하는 인자값들이 들어있다. <br>
