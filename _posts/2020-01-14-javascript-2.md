@@ -37,6 +37,8 @@ document.write('result : ' + sum(1,2,3,4));
     그래서 **arguments**객체를 이용해서 사용자가 전달하는 인자에 접근할 수 있는 기능을 제공한다. <br>
     **arguments**는 배열과 유사한 사용법을 가지고 있기 때문에 <mark>arguments.length</mark> 라고 하면 <mark>sum(1,2,3,4)에서 sum함수에 전달된 인자들(1,2,3,4)의 갯수를 알 수있다.</mark> 그러므로 arguments.length 의 값은 4가 나온다.
 
+<br>
+
 * 실행결과  
 
 <script>
