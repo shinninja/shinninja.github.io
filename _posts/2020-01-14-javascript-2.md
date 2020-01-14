@@ -39,7 +39,7 @@ document.write('result : ' + sum(1,2,3,4));
 
 <br>
 
-* 실행결과  
+[ 실행결과 ]
 
 <script>
 function sum(){
