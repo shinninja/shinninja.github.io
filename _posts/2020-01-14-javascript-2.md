@@ -18,7 +18,7 @@ function test(arg) { //arg == parameter(매개변수)
 }
 test(1); //1 == arguments(인자)
 ```
-<br><br>
+<br>
 
 ```javascript
 function sum(){
@@ -38,6 +38,7 @@ document.write('result : ' + sum(1,2,3,4));
     **arguments**는 배열과 유사한 사용법을 가지고 있기 때문에 <mark>arguments.length</mark> 라고 하면 <mark>sum(1,2,3,4)에서 sum함수에 전달된 인자들(1,2,3,4)의 갯수를 알 수있다.</mark> 그러므로 arguments.length 의 값은 4가 나온다.
 
 * 실행결과  
+
 <script>
 function sum(){
     var i, _sum = 0;
