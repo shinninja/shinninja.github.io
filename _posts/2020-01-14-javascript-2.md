@@ -35,11 +35,13 @@ document.write('result : ' + sum(1,2,3,4));
 </script>
 ```
 
-* 위 코드에서 arguments는 약속되어있는 유사 배열이 담긴다. <br>
-  arguments안에는 사용자가 전달하는 인자값들이 들어있다. <br>
-  그래서 arguments객체를 이용해서 사용자가 전달하는 인자에 접근할 수 있는 기능을 제공한다. <br>
-  arguments는 배열과 유사한 사용법을 가지고 있기 때문에 arguments.length 라고 하면 sum(1,2,3,4)에서 sum함수에 전달된 인자들(1,2,3,4)의 갯수를 알 수있다. 그러므로 arguments.length 의 값은 4가 나온다.
+> 위 코드에서 arguments는 약속되어있는 유사 배열이 담긴다. <br>
+  **arguments**안에는 사용자가 전달하는 인자값들이 들어있다. <br>
+  그래서 **arguments**객체를 이용해서 사용자가 전달하는 인자에 접근할 수 있는 기능을 제공한다. <br>
+  **arguments**는 배열과 유사한 사용법을 가지고 있기 때문에 <mark>arguments.length</mark> 라고 하면 <mark>sum(1,2,3,4)에서 sum함수에 전달된 인자들(1,2,3,4)의 갯수를 알 수있다.</mark> 그러므로 arguments.length 의 값은 4가 나온다.
 
+
+* 스크립트 실행 결과
 <script>
 function sum(){
     var i, _sum = 0;
