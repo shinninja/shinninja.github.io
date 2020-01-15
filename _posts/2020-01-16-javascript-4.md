@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript [3] - 객체"
+title: "JavaScript - 객체"
 description: ""
 date: 2020-01-16
 tags: [javascript]

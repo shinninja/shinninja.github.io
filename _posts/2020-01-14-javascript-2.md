@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript [2] - arguments란?"
+title: "JavaScript - arguments란?"
 description: ""
 date: 2020-01-14
 tags: [javascript]

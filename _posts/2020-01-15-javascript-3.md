@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript [3] - 함수의 호출 apply"
+title: "JavaScript - 함수의 호출 apply"
 description: ""
 date: 2020-01-15
 tags: [javascript]

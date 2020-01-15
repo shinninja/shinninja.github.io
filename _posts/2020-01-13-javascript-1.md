@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript [1]"
+title: "JavaScript란?"
 description: ""
 date: 2020-01-13
 tags: [javascript]
@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-## JavaScript 란?
+## JavaScript란?
 
 * 웹 브라우저를 제어하기 위한 언어
 
