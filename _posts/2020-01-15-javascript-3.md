@@ -28,6 +28,11 @@ func();
 <mark>func.apply</mark> 또는 <mark>func.call</mark> 처럼 **apply**와 **call** 메소드에 접근을 할 수 있다.<br>
 **apply** 대해 알아보자.
 
+## apply
+* apply는 두번째 인자로 원래 함수의 인자를 배열로 호출을 한다.
+* apply의 첫번째 인자를 null 말고 다른 것을 사용하기 위해서 apply를 사용한다.
+
+
 ```javascript
 function sum(arg1, arg2){
     return arg1 + arg1;
@@ -38,10 +43,6 @@ sum.apply(null, [1,2]); // 3
 ```
 
 위 코드에서 sum을 호출한 값은 모두 '3'으로 똑같다.<br><br>
-
-## apply
-* apply는 두번째 인자로 원래 함수의 인자를 배열로 호출을 한다.
-* apply의 첫번째 인자를 null 말고 다른 것을 사용하기 위해서 apply를 사용한다.
 
 <br>
 
