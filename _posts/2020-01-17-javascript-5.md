@@ -75,7 +75,7 @@ for(var name in grades) {
 ```
 
 
-## 리스트 형식으로 객체의 값 출력해보기.
+### 리스트 형식으로 객체의 값 출력해보기.
 
 
 <ul>
@@ -86,3 +86,9 @@ for(var name in grades) {
 }
 </script>
 </ul>
+
+<div class="box">
+   <p>참고 : 생활코딩</p>
+</div>
+
+--- 
