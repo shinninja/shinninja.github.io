@@ -47,7 +47,7 @@ k8805
 sorialgi
 ```
 
-이렇게 **console.log(key);**로 가져오면 value값을 가져오는게 아니고 key값을 가져오게 된다.
+이렇게 **console.log(key);**로 가져오면 **value**값을 가져오는게 아니고 **key**값을 가져오게 된다.
 
 <br>
 
@@ -63,20 +63,14 @@ for(key in grades){
 80
 ```
 
-**console.log(grades[key])**로 가져오면 객체에 저장된 value값을 가져올 수 있다.
+**console.log(grades[key])**로 가져오면 객체에 저장된 **value**값을 가져올 수 있다.
 
 <br>
-
-```javascript
-var grades = {'shinninja': 10, 'k8805': 6, 'sorialgi': 80};
-for(var name in grades) {
-    document.write("key : "+name+" value : "+grades[name]+"<br />");
-}
-```
 
 
 ### 리스트 형식으로 객체의 값 출력해보기.
 
+<br>
 
 <ul>
 <script>
@@ -86,6 +80,13 @@ for(var name in grades) {
 }
 </script>
 </ul>
+
+```javascript
+var grades = {'shinninja': 10, 'k8805': 6, 'sorialgi': 80};
+for(var name in grades) {
+    document.write("<li>key : "+name+" value : "+grades[name]+"</li>");
+}
+```
 
 <p class="reference-txt">참고 : 생활코딩</p>
 
