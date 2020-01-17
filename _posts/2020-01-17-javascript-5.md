@@ -87,8 +87,6 @@ for(var name in grades) {
 </script>
 </ul>
 
-<div class="box">
-   <p>참고 : 생활코딩</p>
-</div>
+<p class="reference-txt">참고 : 생활코딩</p>
 
 --- 
