@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "JavaScript - 객체"
+title: "[JS] 객체"
 description: ""
 date: 2020-01-16
-tags: [javascript]
+tags: [javascript, 객체]
 comments: true
 share: true
 ---
