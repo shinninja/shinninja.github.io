@@ -70,8 +70,6 @@ for(key in grades){
 
 ### 리스트 형식으로 객체의 값 출력해보기.
 
-<br>
-
 <ul>
 <script>
 var grades = {'shinninja': 10, 'k8805': 6, 'sorialgi': 80};
