@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "JavaScript - arguments란?"
+title: "[JS] arguments란?"
 description: ""
 date: 2020-01-14
-tags: [javascript]
+tags: [javascript, arguments, parameter]
 comments: true
 share: true
 ---
