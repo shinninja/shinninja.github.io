@@ -96,6 +96,7 @@ grades['show']();
     <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그1</a>,
     <a href="https://poiemaweb.com/js-object-oriented-programming" target="_blankd">블로그2</a>, 
     <a href="https://m.blog.naver.com/PostView.nhn?blogId=ndb796&logNo=221174086835&proxyReferer=https%3A%2F%2Fwww.google.com%2F" target="_blankd">블로그3</a>, 
+    <a href="https://preamtree.tistory.com/120" target="_blankd">블로그4</a>, 
     <a href="https://ko.wikipedia.org/wiki/객체_지향_프로그래밍" target="_blankd">위키백과</a>
 </p>
 
