@@ -92,9 +92,10 @@ grades['show']();
 
 
 <p class="reference-txt">참고 : 
-    <a href="https://www.youtube.com/watch?v=Mi33-EcMn48&feature=emb_logo" target="_blankd">생활코딩</a>,
-    <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그1</a>
-    <a href="https://poiemaweb.com/js-object-oriented-programming" target="_blankd">블로그2</a>
+    <a href="https://www.youtube.com/watch?v=Mi33-EcMn48&feature=emb_logo" target="_blankd">생활코딩</a>, 
+    <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그1</a>,
+    <a href="https://poiemaweb.com/js-object-oriented-programming" target="_blankd">블로그2</a>, 
+    <a href="https://m.blog.naver.com/PostView.nhn?blogId=ndb796&logNo=221174086835&proxyReferer=https%3A%2F%2Fwww.google.com%2F" target="_blankd">블로그3</a>, 
     <a href="https://ko.wikipedia.org/wiki/객체_지향_프로그래밍" target="_blankd">위키백과</a>
 </p>
 
