@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JS] 객체 지향 프로그래밍"
+title: "[JS] 객체지향 프로그래밍"
 description: ""
 date: 2020-01-20
 tags: [javascript, 객체, 객체지향프로그래밍, OOP]
@@ -8,8 +8,14 @@ comments: true
 share: true
 ---
 
-## 객체 지향 프로그래밍 (Object Oriented Programming)
-* 서로 연관되어있는 값과 연관되어있는 데이터와 연관되어있는 어떤 처리를 하나의 그릇안에 모아서 그룹해놓은 프로그래밍 스타일
+## 객체지향 프로그래밍 (Object-Oriented Programming)
+객체지향 프로그래밍은 함수들의 집합 혹은 단순한 컴퓨터의 명령어들의 목록이라는 전통적인 절차지향 프로그래밍과는 다른, <mark>여러 개의 독립된 단위, 즉 관계성있는 객체들의 집합</mark>이라는 관점으로 접근하는 소프트웨어 디자인으로 볼 수 있다.<br>
+각 객체는 메시지를 받을 수도 있고, 데이터를 처리할 수도 있으며, 또다른 객체에게 메시지를 전달할 수도 있다. 각 객체는 별도의 역할이나 책임을 갖는 작은 독립적인 기계 또는 부품으로 볼 수 있다.<br>
+(서로 연관되어있는 값과 연관되어있는 데이터와 연관되어있는 어떤 처리를 하나의 그릇안에 모아서 그룹해놓은 프로그래밍 스타일)
+
+<br>
+
+[예제]
 
 ```javascript
 var grades = {
@@ -45,7 +51,7 @@ grades['show']();
 
 <br>
 
-### 객체 지향 프로그래밍의 장, 단점
+### 객체지향 프로그래밍의 장, 단점
 #### 장점
 * 코드 재사용이 용이 : 남이 만든 클래스를 가져와서 이용할 수 있고, 상속을 통해 확장해서 사용할 수 있다.
 * 유지보수가 쉬움 : 절차 지향 프로그래밍에서는 코드를 수정해야할 때 일일이 찾아 수정해야하는 반면 객체지향 프로그래밍에서는 수정해야 할 부분이 클래스 내부에 멤버 변수, 혹은 메서드로 있기 때문에 해당 부분만 수정하면 된다.
@@ -58,7 +64,7 @@ grades['show']();
 
 <br>
 
-### 객체 지향 프로그래밍 키워드 5가지
+### 객체지향 프로그래밍 키워드 5가지
 * 클래스 + 인스턴스(객체)
     * 클래스 : 어떤 문제를 해결하기 위한 데이터를 만들기 위해 추상화를 거쳐 <mark>집단에 속하는 **속성**(attribute)과 **행위**(behavior)를 **변수**와 **메서드**로 정의한 것</mark>
     * 인스턴스(객체) : <mark>클래스에서 정의한 것을 토대로 실제 메모리상에 할당된 것</mark>으로 실제 프로그램에서 사용되는 데이터
@@ -87,7 +93,9 @@ grades['show']();
 
 <p class="reference-txt">참고 : 
     <a href="https://www.youtube.com/watch?v=Mi33-EcMn48&feature=emb_logo" target="_blankd">생활코딩</a>,
-    <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그</a>
+    <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그1</a>
+    <a href="https://poiemaweb.com/js-object-oriented-programming" target="_blankd">블로그2</a>
+    <a href="https://ko.wikipedia.org/wiki/객체_지향_프로그래밍" target="_blankd">위키백과</a>
 </p>
 
 --- 
