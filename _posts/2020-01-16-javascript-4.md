@@ -31,8 +31,9 @@ share: true
 var grades = {'shinninja': 10, 'k8805': 6, 'sorialgi': 80};
 ```
 
-위 코드에서 객체는 **'shinninja', 'k8805', 'sorialgi'** 3개의 문자열 index가 있다.<br>
+* 위 코드에서 객체는 **'shinninja', 'k8805', 'sorialgi'** 3개의 문자열 index가 있다.<br>
 **10, 6, 80** 는 index의 값이다.
+* {} 중괄호와 중괄호 사이에는 객체가 된다.
 
 #### 방법2.
 

@@ -20,17 +20,17 @@ share: true
 
 ```javascript
 var grades = {
-    'list' : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80} // 'grades'라는 객체 안에 'list'라는 객체를 또 생성했다.
+    'list' : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}, // 'grades'라는 객체 안에 'list'라는 객체를 또 생성했다.
     'show' : function(){ // 함수를 담을 수도 있다.
         console.log('Hello world');
     }
 };
 
-console.log(grades['list']); // 결과값 : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}
-console.log(grades['list']['shinninja']); // 결과값 : 10
-console.log(grades['show']());
-grades['show']();
-grades.show();
+console.log(grades['list']); // 객체를 가져오는 방법 (결과값 : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80})
+console.log(grades['list']['shinninja']); // key값을 가져오는 방법 (결과값 : 10)
+console.log(grades['show']()); // 함수 호출 하는 방법 1
+grades['show'](); // 함수 호출 하는 방법 2
+grades.show(); // 함수 호출 하는 방법 3
 ```
 
 <br>
@@ -39,17 +39,42 @@ grades.show();
 
 ```javascript
 var grades = {
-    'list' : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}, // 'grades'라는 객체 안에 'list'라는 객체를 또 생성했다.
-    'show' : function(){ // 함수를 담을 수도 있다.
-        console.log('Hello world');
+    'list' : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}, 
+    'show' : function(){
+        console.log(this);
+        console.log(this.list); // 결과값 : {shinninja: 10, k8805: 6, sorialgi: 80}
     }
 };
 
-console.log(grades['list']); // 결과값 : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}
-console.log(grades['list']['shinninja']); // 결과값 : 10
-console.log(grades['show']());
 grades['show']();
+
+결과값 : object {shinninja: 10, k8805: 6, sorialgi: 80}
 ```
+
+<mark>this</mark>는 javascript에서 약속 되어 있는 정해져 있는 **변수**다.
+위 코드에서의 <mark>this는 **함수(show)가 속해있는 객체(grades)를 가리키는 변수다.</mark>
+
+
+```javascript
+var grades = {
+    'list' : {'shinninja': 10, 'k8805': 6, 'sorialgi': 80}, 
+    'show' : function(){
+        for(var name in this.list){
+            console.log(name, this.list[name]);
+        }
+    }
+};
+
+grades.show(); 
+
+결과값    
+shinninja 10
+k8805 6
+sorialgi 80
+```
+
+grades라는 객체는 서로 연관되어 있는 list라고 하는 데이터와 show라고 하는 함수를 그룹핑한 그릇이라고 할 수 있다. <br>
+이런것들을 객체지향 프로그래밍이라고 한다.
 
 <br>
 
