@@ -51,9 +51,10 @@ grades['show']();
 결과값 : object {shinninja: 10, k8805: 6, sorialgi: 80}
 ```
 
-<mark>this</mark>는 javascript에서 약속 되어 있는 정해져 있는 **변수**다.
-위 코드에서의 <mark>this는 **함수(show)가 속해있는 객체(grades)를 가리키는 변수다.</mark>
+<mark>this</mark>는 javascript에서 약속 되어 있는 정해져 있는 **변수**다.<br>
+위 코드에서의 <mark>this는 함수(show)가 속해있는 객체(grades)를 가리키는 변수다.</mark>
 
+<br>
 
 ```javascript
 var grades = {
@@ -73,7 +74,7 @@ k8805 6
 sorialgi 80
 ```
 
-grades라는 객체는 서로 연관되어 있는 list라고 하는 데이터와 show라고 하는 함수를 그룹핑한 그릇이라고 할 수 있다. <br>
+**'grades'**라는 객체는 서로 연관되어 있는 **'list'**라고 하는 데이터와 **'show'**라고 하는 함수를 그룹핑한 그릇이라고 할 수 있다. 
 이런것들을 객체지향 프로그래밍이라고 한다.
 
 <br>
@@ -93,7 +94,7 @@ grades라는 객체는 서로 연관되어 있는 list라고 하는 데이터와
 
 ### 객체지향 프로그래밍 키워드 5가지
 * 클래스 + 인스턴스(객체)
-    * 클래스 : 어떤 문제를 해결하기 위한 데이터를 만들기 위해 추상화를 거쳐 <mark>집단에 속하는 **속성**(attribute)과 **행위**(behavior)를 **변수**와 **메서드**로 정의한 것</mark>
+    * 클래스 : 어떤 문제를 해결하기 위한 데이터를 만들기 위해 추상화를 거쳐 <mark>집단에 속하는 <strong>속성(attribute)</strong>과 <strong>행위(behavior)</strong>를 <strong>변수</strong>와 <strong>메서드</strong>로 정의한 것</mark>
     * 인스턴스(객체) : <mark>클래스에서 정의한 것을 토대로 실제 메모리상에 할당된 것</mark>으로 실제 프로그램에서 사용되는 데이터
 * 추상화 : 불필요한 정보는 숨기고 중요한 정보만을 표현함으로써 <mark>공통의 속성이나 기능을 묶어 이름을 붙이는 것</mark>이다.
 * 캡슐화 
