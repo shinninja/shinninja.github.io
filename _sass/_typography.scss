@@ -77,6 +77,7 @@ p {
   color: $text-color;
   margin: 0;
   line-height: 1.7em;
+  word-break: keep-all;
 }
 
 /*--------------
@@ -89,6 +90,7 @@ ol, ul, dl, dt, dd, li {
   padding: 0;
   list-style: none;
   list-style-image: none;
+  word-break: keep-all;
 }
 
 //  Positioning Bullets
