@@ -119,7 +119,7 @@ sorialgi 80
 
 
 
-<p class="reference-txt">참고 : 
+<p class="reference-txt">출처 : 
     <a href="https://www.youtube.com/watch?v=Mi33-EcMn48&feature=emb_logo" target="_blankd">생활코딩</a>, 
     <a href="https://jeong-pro.tistory.com/95" target="_blankd">블로그1</a>,
     <a href="https://poiemaweb.com/js-object-oriented-programming" target="_blankd">블로그2</a>, 

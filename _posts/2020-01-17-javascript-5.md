@@ -86,6 +86,6 @@ for(var name in grades) {
 }
 ```
 
-<p class="reference-txt">참고 : 생활코딩</p>
+<p class="reference-txt">출처 : 생활코딩</p>
 
 --- 
