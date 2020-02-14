@@ -5,6 +5,15 @@ layout: default
   <div class="header-small">
     <h1><a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a></h1>
   </div>
+  <nav class="header-nav">
+    {% for nav in site.nav %}
+    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+    <a href="{{ nav.url }}">{{ nav.name }}</a>
+    {% else %}
+    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+    {% endif %}
+    {% endfor %}
+  </nav>
 </header>
 <div class="page">
   <h2 class="page-title">{{ page.title }}</h2>
