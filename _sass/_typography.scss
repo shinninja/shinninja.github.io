@@ -331,7 +331,7 @@ th {
   word-break: keep-all;
 }
 
-tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) td,  
 tbody tr:nth-child(odd) th {
   background-color: $table-background-color;
 }
