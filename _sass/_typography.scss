@@ -326,8 +326,9 @@ table {
 
 td,
 th {
-  padding: .25rem .5rem;
+  padding: 1rem;
   border: 1px solid $table-border-color;
+  word-break: keep-all;
 }
 
 tbody tr:nth-child(odd) td,
