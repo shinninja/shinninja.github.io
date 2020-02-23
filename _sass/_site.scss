@@ -93,6 +93,11 @@ body {
     }
     
   }
+
+  @media (max-width: 48rem){
+    .header-title {margin-top:30px;font-size:24px;}
+    .header-nav {top:0}
+  }
 }
 
 .header-small {
@@ -343,6 +348,10 @@ body {
         }
       }
     }
+  }
+
+  @media (max-width: 48rem){
+    .list-post-title {font-size:1.5rem;}
   }
 }
 
