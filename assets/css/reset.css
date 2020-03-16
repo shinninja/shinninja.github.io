@@ -46,7 +46,7 @@ legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-size:0;li
 .blind {clear:both;position:absolute;top:auto;left:0;overflow:hidden;width:1px;height:1px;padding:0;margin:0;font-size:0;line-height:0}
 .blind:after {display:none}
 
-img {vertical-align:top;width:100%;}
+img {vertical-align:top;}
 
 em {font-style:normal;}
 
