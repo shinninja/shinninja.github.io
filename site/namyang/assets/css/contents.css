@@ -9,16 +9,26 @@ header {height:96px;border-bottom:1px solid #f1f1f1}
 .headerWrap {position:relative;width:1120px;margin:0 auto;}
 .headerWrap .logo {position:absolute;top:45px;left:103px;}
 .headerWrap .logo a {display:block;}
+.headerInner {position:relative;margin-top:10px;}
+.headerInner:after {clear:both;display:block;content:"";}
 
-/* utill */
-.headerWrap .utill {padding-top:12px;text-align:right;font-size:0;}
-.headerWrap .utill a {display:inline-block;margin-left:20px;font-size:12px;color:#666;}
-.headerWrap .utill .linkAnother {position:relative;margin-left:16px;font-size:12px;}
-.headerWrap .utill .linkAnother::before {content:"|";display:inline-block;position:relative;top:-2px;margin-right:15px;color:#aaa;}
-.headerWrap .utill .linkAnother em {color:#e30a61;}
+/* sideLink */
+.headerWrap .sideLink {padding-top:12px;text-align:right;font-size:0;}
+.headerWrap .sideLink a {display:inline-block;margin-left:20px;font-size:12px;color:#666;}
+.headerWrap .sideLink .linkAnother {position:relative;margin-left:16px;font-size:12px;}
+.headerWrap .sideLink .linkAnother::before {content:"|";display:inline-block;position:relative;top:-2px;margin-right:15px;color:#aaa;}
+.headerWrap .sideLink .linkAnother em {color:#e30a61;}
 
 /* nav */
-.navList {margin:10px 0 0 210px;}
-.navList:after {clear:both;display:block;content:"";}
-.navList li {float:left;}
-.navList li > a {display:block;height:61px;padding:22px 25px;color:#111113;font-weight:bold;font-size:16px;}
+.headerInner .navList {float:left;margin-left:210px;}
+.headerInner .navList:after {clear:both;display:block;content:"";}
+.headerInner .navList li {float:left;}
+.headerInner .navList li > a {display:block;height:61px;padding:22px 25px;color:#111113;font-weight:bold;font-size:16px;}
+
+/* utility */
+.headerInner .util {float:right;margin-top:17px;font-size:0;}
+.headerInner .util .icon {display:inline-block;overflow:hidden;width:28px;height:27px;margin-left:25px;background-repeat:no-repeat;background-image:url(../../assets/images/icon/sprite.png);vertical-align:middle;}
+.headerInner .util .iconSearch {background-position:-20px -4px;}
+.headerInner .util .iconCart {background-position:-59px -4px;}
+.headerInner .util .iconCookie {background-position:-884px -4px;}
+.headerInner .util .iconMy {background-position:-102px -4px;}
