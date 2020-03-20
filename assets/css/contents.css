@@ -63,6 +63,7 @@ hr {margin:0;border:none;}
 .hm-bottom-nav__link:before {content: '';display:block;position:absolute;top:0;left:50%;width:32px;height:32px;background-position:0 0;background-size: 100%;transform:translateX(-50%);}
 .hm-bottom-nav__link--service {width:100%;padding-top:0;}
 .hm-bottom-nav__link--service:before {width:24px;height:24px;margin-top:3px;background-image:url(../../images/demo/icon/bottom_nav_motion.png);}
+/* .hm-bottom-nav__link--service:before {width:24px;height:24px;margin:3px auto 0;background-image:url(../img/icon/nav/bottom_nav_motion.png);animation-duration:1.5s;animation-name:service;animation-iteration-count: infinite;animation-direction: alternate;} */
 @keyframes dimm-show { from { opacity: 0; }
   to { opacity: 1; } 
 }
