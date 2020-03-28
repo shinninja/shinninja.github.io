@@ -1,6 +1,11 @@
 @charset "utf-8";
 
+/*======================================================================
+    layout
+======================================================================*/
 .wrap {min-width:1120px;}
+.container {padding-top:30px;}
+
 
 /*======================================================================
     header
@@ -32,3 +37,96 @@ header {height:96px;border-bottom:1px solid #f1f1f1}
 .headerInner .util .iconCart {background-position:-59px -4px;}
 .headerInner .util .iconCookie {background-position:-884px -4px;}
 .headerInner .util .iconMy {background-position:-102px -4px;}
+
+
+/*======================================================================
+    container
+======================================================================*/
+.contents {position:relative;width:1120px;margin:0 auto 100px;}
+.contents .btnMore {position:absolute;right:0;color:#000;font-size:14px;}
+.contents .btnMore:after {content:"";display:inline-block;position:relative;top:-3px;width:30px;height:30px;margin-left:10px;background:url(../images/icon/sprite.png) no-repeat -216px 0;vertical-align:middle;}
+
+/* head */
+.head3 {font-size:30px;color:#000100;letter-spacing:-1px;}
+
+/* breadcrumbs */
+.breadcrumbs {margin-bottom:45px;}
+.breadcrumbsList:after {clear:both;display:block;content:"";}
+.breadcrumbsList > li {position:relative;float:left;margin-left:10px;}
+.breadcrumbsList > li:first-of-type {margin-left:0;}
+.breadcrumbsList > li:before {content:"";display:inline-block;width:5px;height:9px;background-image:url('../../assets/images/icon/sprite.png');background-repeat:no-repeat;background-position:-994px -1px;opacity:.5;}
+.breadcrumbsList > li > a {display:inline-block;padding-left:10px;color:#a9a9a7;font-size:12px;}
+.breadcrumbsList > li.home > a {padding-left:5px;}
+.breadcrumbsList > li.home:before {width:12px;height:11px;background-position:-131px 0;opacity:1;}
+
+/* tab */
+.jsTabWrap .jsTabHead:after {clear:both;display:block;content:"";}
+.jsTabWrap .jsTabHead > li {float:left;}
+.jsTabWrap .jsTabCont > div {display:none;}
+.jsTabWrap .jsTabCont > div:first-of-type {display:block;}
+
+/* tab - box fill */
+.tabBoxFill .jsTabHead {display:table;width:100%;border-bottom:2px solid #000;margin-bottom:40px;}
+.tabBoxFill .jsTabHead > li {display:table-cell;float:none;height:56px;min-width:373px;}
+.tabBoxFill .jsTabHead > li a {display:block;text-align:center;border-top:1px solid #ebebeb;border-right:1px solid #ebebeb;line-height:55px;color:#030000;font-size:16px;}
+.tabBoxFill .jsTabHead > li:first-child a {border-left:1px solid #ebebeb;}
+.tabBoxFill .jsTabHead > li.on a {background:#000;color:#fff;font-weight:bold;border-color:#000;}
+
+/* tab - inline text */
+.tabInlineText .jsTabHead {margin-bottom:25px;}
+.tabInlineText .jsTabHead > li {margin-left:25px;}
+.tabInlineText .jsTabHead > li:first-child {margin-left:0;}
+.tabInlineText .jsTabHead > li.on > a {color:#000;}
+
+/* goods list */
+.goodsList {margin:-8px 0 0 -8px;}
+.goodsList:after {clear:both;display:block;content:"";}
+.goodsList > li {position:relative;float:left;margin:8px 0 0 8px;}
+.goodsList .goodsItem {position:relative;display:block;height:100%;border:1px solid #ededed;background:#fff;}
+.goodsList .goodsInfo {position:relative;}
+.goodsList .goodsDetail {display:none;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,.7);}
+.goodsList .goodsDetailCont {position:relative;top:50%;transform:translateY(-50%);text-align:center;}
+.goodsList .goodsDetailCont .detailItem {display:inline-block;margin:0 11px;font-size:0;}
+.goodsList .goodsDetailCont .detailItem .iconBtn {position:relative;font-size:14px;color:#000;}
+.goodsList .goodsDetailCont .detailItem .iconBtn i {position:relative;display:block;width:57px;height:57px;margin-bottom:10px;background:#000;border-radius:50%;}
+.goodsList .goodsDetailCont .detailItem .iconBtn i:before {content:"";display:inline-block;position:relative;top:17px;background:url(../images/icon/sprite.png) no-repeat 0 0;}
+.goodsList .goodsDetailCont .detailItem .iconBtn .iconView:before {width:21px;height:21px;background-position:-781px -38px;}
+.goodsList .goodsDetailCont .detailItem .iconBtn .iconOrder:before {width:26px;height:21px;background-position:-480px 0;}
+.goodsList .goodsName {height:44px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.4;word-wrap:break-word;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:16px;letter-spacing:-1px;color:#000;}
+.goodsList .goodsPrice {color:#000;font-size:26px;}
+.goodsList .goodsPrice .unit {color:#9a9899;font-size:16px;}
+.goodsList .goodsUtil {display:none;position:relative;z-index:9;}
+.goodsList .goodsUtilCont {position:absolute;left:0;bottom:-52px;display:table;width:100%;height:52px;background:#ec1f2f;}
+.goodsList .goodsUtilCont .utilItem {position:relative;display:table-cell;width:50%;vertical-align:middle;}
+.goodsList .goodsUtilCont .utilItem:before {content:"|";position:absolute;color:rgba(255,255,255,.5);}
+.goodsList .goodsUtilCont .utilItem:first-child:before {display:none;}
+.goodsList .goodsUtilCont .utilItem .iconBtn {display:block;width:100%;color:#fff;text-align:center;font-size:14px;}
+.goodsList .goodsUtilCont .utilItem .iconBtn > span:before {content:"";display:inline-block;position:relative;top:-1px;margin-right:8px;background:url(../images/icon/sprite.png) no-repeat 0 0;vertical-align:middle;}
+.goodsList .goodsUtilCont .utilItem .iconBtn.iconLike > span:before {width:23px;height:21px;background-position:-511px 0;}
+.goodsList .goodsUtilCont .utilItem .iconBtn.iconCart > span:before {width:21px;height:21px;background-position:-542px 0;}
+.goodsList > li:hover .goodsItem {border-color:#000;border-bottom-color:#ededed;}
+.goodsList > li:hover .goodsDetail {display:block;}
+.goodsList > li:hover .goodsName {text-decoration:underline;}
+.goodsList > li:hover .goodsUtil {display:block;}
+
+/* goods list - 세로형 */
+.goodsListCol > li {width:274px;height:410px;}
+.goodsListCol .goodsItem {padding:0 20px;}
+.goodsListCol .goodsInfo {margin:50px 0;}
+.goodsListCol .goodsInfo .goodsImg {display:block;margin:0 auto;width:192px;height:192px;}
+.goodsListCol .goodsPrice {margin-top:20px;text-align:right;}
+
+/* goods list - 가로형 */
+.goodsListRow > li {width:556px;height:215px;}
+.goodsListRow .goodsItem {padding:70px 0 0 230px;}
+.goodsListRow .goodsInfo {position:absolute;top:10px;left:0;}
+.goodsListRow .goodsPrice {margin-top:10px;}
+
+/* 가정배달 > 분류별 상품 */
+.goodsTypes {margin-bottom:100px;padding:65px 0 70px;background:#f4f5f7;}
+.goodsTypes .contents {margin-bottom:0;}
+.goodsTypes .contents .head3 {margin-bottom:25px;}
+.goodsTypes .contents .btnMore {top:50px;}
+
+/* 가정배달 > 가정배달 인기 브랜드 */
+.contHomeDelivery .btnMore {top:0;}
