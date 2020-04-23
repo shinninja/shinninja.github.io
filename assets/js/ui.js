@@ -4,11 +4,8 @@ $(function () {
 
 var NINJA = {
     UI: {
-         /**
-        * bottom nav service animation
-        *
-        * @author : 신다혜
-        */
+
+        /* animationBottomNav */
         animationBottomNav: function(){
             var $bottomNav = $('.hm-bottom-nav');
             var $service = $('.hm-bottom-nav__link--service');
@@ -31,6 +28,30 @@ var NINJA = {
 
             setInterval(intervalClass, 3500);
         },
+
+        /* tabsType01 */
+        tabsType01: function(target){
+            var $target = $(target);
+            var $tabItem = $target.find('.jsTabHead > li');
+            var $tabCont = $target.find('.jsTabCont');
+            var idx = 0;
+
+            $tabItem.on('click', function(e){
+                e.preventDefault();
+
+                $(this).addClass('on').siblings().removeClass('on');
+                idx = $(this).index();
+                $tabCont.eq(idx).addClass('on').siblings().removeClass('on');
+            });
+        },
+
+        /* tabsType02 */
+        tabsType02: function(tabItem, tabCont){
+            var $tabItem = $(tabItem);
+
+            $(tabItem).addClass('on');
+        }
+
     },
 
     INIT: function(){

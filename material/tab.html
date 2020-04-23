@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Tab</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/contents.css">
+
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/ui.js"></script>
+</head>
+
+<body>
+	<div class="materialWrap">
+		<h1>Tab</h1>
+
+		<h2>Tab - Full</h2>
+		<div class="tabBoxFill jsTabWrap" id="jsTabWrap1">
+			<ul class="jsTabHead">
+				<li class="on"><a href="javascript:#tabCont01">Tab01</a></li>
+				<li><a href="javascript:#tabCont02">Tab02</a></li>
+				<li><a href="javascript:#tabCont03">Tab03</a></li>
+			</ul>
+
+			<div id="tabCont01" class="jsTabCont on">tabCont01</div>
+
+			<div id="tabCont02" class="jsTabCont">tabCont02</div>
+
+			<div id="tabCont03" class="jsTabCont">tabCont03</div>
+		</div>
+		<br>
+		<div class="tabBoxFill jsTabWrap" id="jsTabWrap2">
+			<ul class="jsTabHead">
+				<li><a href="javascript:#tabCont01">Tab01</a></li>
+				<li class="on"><a href="javascript:#tabCont02">Tab02</a></li>
+				<li><a href="javascript:#tabCont03">Tab03</a></li>
+			</ul>
+
+			<div id="tabCont01-01" class="jsTabCont">tabCont01</div>
+
+			<div id="tabCont01-02" class="jsTabCont on">tabCont02</div>
+
+			<div id="tabCont01-03" class="jsTabCont">tabCont03</div>
+		</div>
+
+		<hr class="divider">
+
+		<h2>Tab - Line</h2>
+		<div class="tabBoxLine jsTabWrap">
+			<ul class="jsTabHead">
+				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont1')" class="on">Tab01</button></li>
+				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont2')">Tab02</button></li>
+				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont3')">Tab03</button></li>
+			</ul>
+
+			<div class="jsTabCont">
+				<div class="tabCont on" id="tabBoxLineCont1">
+					tabCont01
+				</div>
+
+				<div class="tabCont" id="tabBoxLineCont2">
+					tabCont02
+				</div>
+
+				<div class="tabCont" id="tabBoxLineCont3">
+					tabCont03
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		NINJA.UI.tabsType01('#jsTabWrap1');
+		NINJA.UI.tabsType01('#jsTabWrap2');
+	</script>
+</body>
+
+</html>
