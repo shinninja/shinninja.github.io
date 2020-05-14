@@ -14,7 +14,7 @@
 /* ==========================================================================
    common
    ========================================================================== */
-hr.divider {height:1px;margin:20px -20px;background:#ccc;}
+hr.divider {height:1px;margin:50px -20px;background:#ccc;}
 
 /* ==========================================================================
    tab 
@@ -44,6 +44,11 @@ hr.divider {height:1px;margin:20px -20px;background:#ccc;}
 .tabInlineText .jsTabHead > li:first-child {margin-left:0;}
 .tabInlineText .jsTabHead > li.on > a {color:#000;}
 
+/* ==========================================================================
+   list
+   ========================================================================== */
+.listStar > li {position:relative;}
+.listStar > li:before {content:"";display:inline-block;width:24px;height:24px;background:url(../../images/icon/icon_star.svg) no-repeat 0 0;background-size:100%;}
 
 /* ==========================================================================
    하단 네비 애니메이션 
