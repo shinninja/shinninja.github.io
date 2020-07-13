@@ -1,0 +1,22 @@
+{
+  "name": "shinninja.github.io",
+  "version": "1.0.0",
+  "description": "> NOTE! Kiko-plus theme will not be update anymore. Please see the new and easier version, [kiko-now](https://github.com/AWEEKJ/kiko-now) theme which is mixed [jekyll-now](https://github.com/barryclark/jekyll-now) and Kiko-plus.",
+  "main": "himartServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinninja/shinninja.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinninja/shinninja.github.io/issues"
+  },
+  "homepage": "https://github.com/shinninja/shinninja.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
