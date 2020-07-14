@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Function</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/contents.css">
+
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+</head>
+
+<body>
+
+	<script>
+		/* 
+		* 스코프 테스트 1
+		*/
+		// let age = prompt('나이를 알려주세요.', 18);
+
+		// // 조건에 따라 함수 선언
+		// if (age < 18) {
+		// 	function welcome(){
+		// 		alert('안녕!');
+		// 	}
+		// } else {
+		// 	function welcome(){
+		// 		alert('안녕하세요!');
+		// 	}
+		// }
+
+		// // 함수를 나중에 호출
+		// welcome();
+
+
+		/* 
+		* 스코프 테스트 2
+		*/
+		let age = 16;
+
+		if (age < 18) {
+			welcome();
+
+			function welcome(){
+				alert('안녕!');
+			}
+
+			welcome();
+		} else {
+			function welcome(){
+				alert('안녕하세요!');
+			}
+		}
+
+		welcome();
+	</script>
+</body>
+
+</html>

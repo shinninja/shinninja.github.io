@@ -130,3 +130,15 @@ $ rake preview
 ## License
 
 This theme is released under MIT License.
+
+# install dependencies
+npm install
+
+# initialize
+npm init
+
+# install express
+npm i express --save
+
+# execute server
+node nodeServer.js
