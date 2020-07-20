@@ -175,6 +175,35 @@ body {
       > li {
         font-size: ($li-child-size-ratio * 1em);
         margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+
+        &:before {
+          content:"";
+          position:absolute;
+          top:8px;
+          left:-20px;
+          width:7px;
+          height:7px;
+          box-sizing:border-box;
+          background:#fff;
+          border-radius:50%;
+          border:1px solid #343a40;
+        }
+
+        > ol,
+        > ul {
+          > li {
+            &:before {
+              content:"";
+              position:absolute;
+              top:8px;
+              left:-20px;
+              width:7px;
+              height:7px;
+              box-sizing:border-box;
+              background:#343a40;
+            }
+          }
+        }
       }
     }
   }
