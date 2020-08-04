@@ -66,7 +66,7 @@ console.log(obj["property_data[property_data_2]"]); // 2
 ```javascript
 var grades = {'shinninja-1': 10, 'sorialgi': 80};
 
-// 객체의 프로퍼티에 접근 하는 방법2
+// 객체의 프로퍼티에 접근 하기
 console.log(grades['shinninja-1']); // 10
 console.log(grades['sori' + 'algi']); //문자열이기 때문에 이렇게 해도 같은 결과값이 나온다.
 ```
