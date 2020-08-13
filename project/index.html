@@ -4,8 +4,8 @@ title: Project
 ---
 <style>
   body {background:blueviolet;}
-  .header-small h1 a {padding:5px 10px;}
-  .header-small h1 a::before {content:"";position:absolute;top:0;left:0;width:0;height:30px;background:yellow;z-index:-1;transition-property:width;transition-duration:.5s;transition-timing-function:ease-in-out;}
+  .header-small h1 a {position:relative;padding:5px 10px;}
+  .header-small h1 a::before {content:"";position:absolute;top:0;left:0;width:0;height:24px;background:yellow;z-index:-1;transition-property:width;transition-duration:.5s;transition-timing-function:ease-in-out;}
   .header-small h1 a:hover::before {width:100%;}
   .page-title {color:#fff;letter-spacing:10px;}
   .footer {color:#000;}
