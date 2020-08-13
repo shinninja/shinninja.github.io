@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+html,body {height:100%;}
+.fullpage_wrap {position:relative;height:100%;}
+.fullpage_wrap .section {position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+.fullpage_wrap .section.active {z-index:1;opacity:1;}
+/* .fullpage_wrap .section {display:table;table-layout:fixed;} */
+.fullpage_wrap #section0 {background-color:#1bbc9b;}
+.fullpage_wrap #section1 {background-color:#4BBFC3;}
+.fullpage_wrap #section2 {background-color:#7BAABE;}
+.fullpage_wrap #section3 {background-color:#ccddff;}
+.fullpage_wrap .section_inner {display:table;width:100%;height:100%;}
+.fullpage_wrap .section_inner h1 {display:table-cell;font-size:50px;vertical-align:middle;text-align:center;}
+
+#header {position:fixed; top:0; left:0; right:0; background:url("../img/gnb_bg.png") repeat; overflow: hidden; height:60px; z-index: 100}
+#header .logo {width:220px; height:60px; float:left}
+#header .logo img {height:100%;}
+#header .gnb {float:left;}
+#header .gnb ul {}
+#header .gnb ul li {display:block; float:left; vertical-align: top; width:155px; text-align: center; color:#fff; font-size:18px; line-height: 60px; font-weight: 400;font-family: 'Inter', sans-serif;}
+#header .gnb ul li a {display:block; color:#fff; opacity: 0.5 }
+#header .gnb ul li a:hover {opacity: 1}
+#header .gnb ul li.active a {background:#fff url("../img/gnb_on.png") center bottom no-repeat; opacity: 1; background-size:100%}
+
+#header .right {display:block; float:right; text-align: right}
+#header .right a {}
+
+
+/*메인*/
+	/*
+		메인 백그라운드
+		animation: changeScale 40s ease-in-out infinite;
+		animation-play-state: running;
+	*/
+	@keyframes changeScale {
+		0%{
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.16);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}
+	/*
+		메인 스크롤 다운
+		animation: scroll ease 2s infinite;
+	*/
+	@keyframes scroll {
+		0% {
+			transform: translateY(0);
+		}
+		30% {
+			transform: translateY(8px);
+		}
+	}
+
+	/*
+		캐릭터 등장 효과
+		animation: charAppear 0.5s 0.1s linear forwards;
+	*/
+	@keyframes charAppear {
+		0%{
+			opacity: 0;
+			transform: translateX(150px);
+		}
+		100%{
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	/*
+		로고 발광 효과
+		animation: logoLight 3s 0.1s linear infinite;
+	*/
+	@keyframes logoLight {
+		0%{
+			opacity: 0;
+		}
+		50%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+
+@keyframes mainLight {
+		0%{
+			opacity: 0;
+		}
+		50%{
+			opacity: 0.5;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+/**/

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>fullpage</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../../assets/css/reset.css">
+<link rel="stylesheet" href="fullpage.css">
+<script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
+<!-- <script type="text/javascript" src="fullpage.js"></script> -->
+<script type="text/javascript" src="common.js"></script>
+</head>
+
+<body>
+	<!-- <ul id="menu">
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+	</ul> -->
+
+	<div id="fullpage" class="fullpage_wrap">
+		<div class="section active" id="section0">
+			<div class="section_inner">
+				<h1>Section 1</h1>
+			</div>
+		</div>
+		<div class="section" id="section1">
+			<div class="section_inner">
+				<h1>Section 2</h1>
+			</div>
+		</div>
+		<div class="section" id="section2">
+			<div class="section_inner">
+				<h1>Section 3</h1>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// var myFullpage = new fullpage('#fullpage', {
+		// 	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+		// 	anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		// 	menu: '#menu',
+		// });
+
+		$(function(){
+			
+			new FullPage({
+				mode: ''
+			});
+		});
+		
+	</script>
+	
+</body>
+
+</html>

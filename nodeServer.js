@@ -25,7 +25,7 @@ for(let i = 0; i < arrServer.length; i++) {
 // npm i express --save
 
 // # execute server
-// node himartServer.js
+// node nodeServer.js
 
 // # 시작프로그램 등록
 // window + R
