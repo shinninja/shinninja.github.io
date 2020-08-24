@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body,div,ul, h1{padding: 0;margin: 0;}
+ul{padding: 0; margin: 0; list-style: none;}
+body{font-family: "맑은 고딕" "MalgunGothic", "나눔고딕", "NanumGothic", "Arial"; font-size: 1em; color: #333;}
+
+#wrap{width: 1400px;margin:0 auto;}
+
+#header{background: yellow;}
+#header:after{clear:both;display:block;content:"";}
+#header .logo{float:left;width: 200px;height: 200px; background: blue; text-align:center;}
+#header .logo a{display:block;height:100%;color:#000;text-decoration:none;}
+
+#header .menu{float:right;}
+#header .menu::after{content: ""; display: block; clear: both;}
+#header .menu li{float:left;}
+#header .menu li:nth-child(odd) a{background:navy;}
+#header .menu li:nth-child(even) a{background:green;}
+#header .menu li a{display:block;width:150px;height:70px;color:#fff;text-align:center;line-height:70px;text-decoration:none;}
+#header .menu li a:hover{background:skyblue;color:#000;text-decoration:underline;}
+
+#gnb{float:right;width: 1200px; height: 130px; background: #ccc;text-align:center;}
+
+
+#section{height: 700px; background: pink;}
+#footer{height: 100px; background: red; text-align: center;}
