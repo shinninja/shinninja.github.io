@@ -539,11 +539,12 @@ body {
 
       .skills-list {
         padding-left:30px;
+        margin-left:-5px;
+        margin-top:-5px;
+        font-size:0;
 
         li {
-          display:inline-block;margin-left:4px;padding:4px 8px 6px;color:$oc-gray-7;border:1px solid #ddd;border-radius:4px;font-size:$base-font-size-s;
-
-          &:first-child {margin-left:0;}
+          display:inline-block;margin-left:5px;margin-top:5px;padding:4px 8px 6px;color:$oc-gray-7;border:1px solid #ddd;border-radius:4px;font-size:$base-font-size-s;
         }
         .logo {width:60px;height:60px;}
       }
@@ -552,6 +553,9 @@ body {
 
     @media (max-width: 48rem){
       padding: 2rem 1.3rem;
+      .about-profile {flex-direction:column;}
+      .about-section-list {padding-left:0;}
+      .about-section .skills-list {padding-left:0;}
     }
  }
 
@@ -576,6 +580,10 @@ body {
         .discrip .name {margin-bottom:5px;font-weight:bold;font-size:$base-font-size-ml;color:#666;}
       }
     }
+  }
+
+  @media (max-width: 48rem){
+    .project-cont-list li {flex-basis:100%}
   }
 }
 
