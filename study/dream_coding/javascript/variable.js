@@ -16,7 +16,8 @@
 
 //======================================================================================================================
 
-// 2. Variable
+// 2. Variable, rw(read/write)
+// Variable 은 메모리의 값을 읽고 쓰는게 가능하다.
 // 변수라고도 얘기하고, 이 변수는 변경될 수 있는 값을 의미한다.
 // let (added in ES6) : 변수를 만들때 let이라는 키워드를 이용한다.
 let name = 'shinninja';
@@ -72,24 +73,35 @@ console.log(age); // 4
 
 //======================================================================================================================
 
-// 3. Constants
-// 한 번 할당하면 값이 절대 바뀌지 않는다.
+// 3. Constant, r(read only)
+// 한 번 할당하면 값이 절대 바뀌지 않는다. Constant는 읽기만 가능하기 때문이다.
+// use const whenever possible.
+// only use let if variable needs to change.
+
 // favor immutable data type always for a few reasons : 
 // - security (보안상의 이유)
 // - thread safety (다양한 thread 들이 동시에 값을 변경하는 것을 방지)
 // - reduce human mistakes (다른 사람이 변경할 때, 실수 방지)
 
-// * Mutable data type(값이 계속 변경될 수 있는 데이터 타입) === let
-// * Immutable data type(값을 변경 할 수 없는 데이터 타입) === const
 
 const daysInweek = 7;
 const maxNumber = 5;
 
+
+// Note!
+// * Immutable data types(값을 변경 할 수 없는 데이터 타입) : premitive types, frozen objects (i.e. object.freeze()) === const
+// * Mutable data type(값이 계속 변경될 수 있는 데이터 타입) === let
+
 //======================================================================================================================
 
 // 4. Variable types
+// - primitive type인지 object type인지에 따라 메모라에 값이 다르게 저장된다.
 // - primitive types (더이상 나눠질 수 없는 한 가지의 아이템 타입(single item)) : number, string, boolean, null, undefinedn, symbol
+//  : value(값) 자체가 메모리에 저장된다.
+
 // - object types (single item 들을 여러개 묶어서 한 단위로 관리할 수 있게 해준다.(box container)) 
+//  : object를 가리키는 레퍼런스가 메모리에 저장된다.
+
 // - function, first-class function (function도 다른 데이터 타입처럼 변수에 할당이 가능하고, 인자로도 전달이 가능, 함수에 리턴타입으로 function를 리턴할 수 있다.)
 
 // 자바스크립트에서는 정수나, 소수점 상관없이 number type으로 할당이 된다.

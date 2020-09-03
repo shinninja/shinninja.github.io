@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {font-family:"Nanum Gothic","나눔고딕","Malgun Gothic","맑은 고딕",Dotum,"돋움",sans-serif;color:#333;line-height:1;}
+
+.contants {position:relative;width:1240px;margin:0 auto;}
+.contants .plus {vertical-align:super;}
+
+/**************************************************************************
+* header
+***************************************************************************/
+header {height:105px;border-bottom:1px solid #eee;}
+header .contants:after {clear:both;display:block;content:"";}
+header .logo {float:left;margin-top:29px;}
+header .rolling_banner {position:absolute;top:32px;left:195px;overflow:hidden;width:220px;height:40px;border-radius:20px;}
+header .rolling_banner .swiper-slide a {display:block;}
+
+nav {float:right;height:105px;padding-top:40px;box-sizing:border-box;}
+nav .gnb:after {clear:both;display:block;content:"";}
+nav .gnb > li {float:left;margin-left:60px;}
+nav .gnb > li > a {display:block;font-size:21px;font-weight:bold;}
+
+/**************************************************************************
+* main container
+***************************************************************************/
+/* 파트너사 */
+.partner {text-align:center;}
+.partner h2 {padding:50px 0;font-size:32px;}
+.partner_list {margin:-50px 0 0 -53px;}
+.partner_list .partner_logo {display:table-cell;width:266px;height:77px;border-bottom:1px solid #ebebeb;vertical-align:middle;}
+.partner_list .partner_def dt {position:relative;margin:21px 0 15px;font-size:16px;color:#222;font-weight:bold;}
+.partner_list .partner_def dt:after {content:"";display:none;width:24px;height:3px;margin:17px auto 0;background:#ed018c;}
+.partner_list .partner_def dd {font-size:18px;line-height:1.6;}
+.partner_list .partner_btn {display:none;width:90px;height:36px;margin-top:20px;line-height:36px;color:#fff;background:#ed018c;border-radius:3px;}
+.partner_list > li {position:relative;float:left;width:270px;height:222px;margin:50px 0 0 53px;border:2px solid #f4f4f4;border-radius:6px;box-sizing:border-box;}
+.partner_list > li:hover {-webkit-animation:event_thum 1s forwards; animation:event_thum 1s forwards;}
+.partner_list > li:hover .partner_logo {display:none;}
+.partner_list > li:hover .partner_def dt {margin-top:25px;font-size:17px;}
+.partner_list > li:hover .partner_def dt:after {display:block;}
+.partner_list > li:hover .partner_btn {display:inline-block;}
+@-webkit-keyframes event_thum{
+	0% {-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);}
+	50% {-webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);}
+	100% {-webkit-box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.1);}
+}
+@keyframes event_thum{
+	0% {box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);}
+	50% {box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);}
+	100% {box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.1);}
+}
