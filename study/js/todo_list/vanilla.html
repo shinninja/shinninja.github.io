@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>To do List</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../../../assets/css/reset.css">
+<script type="text/javascript" src="vanilla.js"></script>
+<style>
+    h1 {padding:50px 0;text-align:center;font-size:50px;}
+    .todoWrap {width:500px;margin:0 auto;border:1px solid #ddd;}
+    .todoWrap input[type="text"] {width:100%;height:50px;line-height:50px;border:none;box-sizing:border-box;font-size:20px;text-indent:10px;}
+    .todoWrap input[type="text"]::placeholder {color:#eee;}
+    .todoWrap input[type="text"]:focus {outline:none !important;}
+    .todoWrap .todoList > li {position:relative;height:45px;padding:0 10px;line-height:45px;border-top:1px solid #eee;}
+    .todoWrap .todoList > li input[type="checkbox"] {width:15px;height:15px;}
+    .todoWrap .todoList > li input[type="checkbox"] + label {padding-left:10px;}
+    .todoWrap .todoList > li .btn_del {position:absolute;top:50%;right:10px;display:block;padding:0 10px;height:30px;text-align:center;background-color:coral;color:#fff;border-radius:5px;transform:translateY(-50%);}
+</style>
+</head>
+
+<body>
+    <h1>To do List</h1>
+
+    <div class="todoWrap">
+        <input type="text" value="" id="todoInput" placeholder="What needs to be done?" onkeyup="enterKey();">
+        <ul class="todoList" id="todoList">
+        </ul>
+    </div>
+</body>
+
+</html>
