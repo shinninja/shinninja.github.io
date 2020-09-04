@@ -1,10 +1,10 @@
-var cnt = 0;
-var todoInput = document.getElementById('todoInput');
-var todoList = document.getElementById('todoList');
+let cnt = 0;
+const todoInput = document.getElementById('todoInput');
+const todoList = document.getElementById('todoList');
 
 function enterKey(){
-    var inputValue = todoInput.value;
-    var str = '';
+    let inputValue = todoInput.value;
+    let str = '';
 
     if(window.event.keyCode == 13){
         cnt++;
@@ -27,8 +27,8 @@ function delTodoList(pram){
 }
 
 function validationCheck() {
-    todoList.addEventListener("click", function(e) { //delegate
-        var target = e.target;
+    todoList.addEventListener("click", e => { //delegate
+        let target = e.target;
         if(target.checked){
             e.target.parentElement.classList.add('completed');
             // e.target.parentElement.className = 'completed';
