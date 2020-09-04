@@ -1,8 +1,8 @@
 var cnt = 0;
+var todoInput = document.getElementById('todoInput');
+var todoList = document.getElementById('todoList');
 
 function enterKey(){
-    var todoInput = document.getElementById('todoInput');
-    var todoList = document.getElementById('todoList');
     var inputValue = todoInput.value;
     var str = '';
 
@@ -27,14 +27,13 @@ function delTodoList(pram){
 }
 
 function validationCheck() {
-    var checkNode = document.getElementsByName('todolistCheck');
-
-    for(i=0; i<checkNode.length; i++){
-        
-        checkNode[i].addEventListener('click', event => {
-            if(checkNode[i].checked){
-                console.log('checked');
-            }  
-        });
-    }
+    todoList.addEventListener("click", function(e) { //delegate
+        var target = e.target;
+        if(target.checked){
+            e.target.parentElement.classList.add('completed');
+            // e.target.parentElement.className = 'completed';
+        } else {
+            e.target.parentElement.classList.remove('completed');
+        }
+    });
 }
