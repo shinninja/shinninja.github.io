@@ -514,9 +514,11 @@ body {
         flex:2;padding:20px 30px;border-left:$border-gray-1;
 
         &-list {
-          .ico {position:relative;font-size:0;vertical-align:middle;}
+          .ico {position:relative;display:inline-block;font-size:0;vertical-align:middle;}
           .ico:before {content:"";display:inline-block;background-repeat:no-repeat;background-size:contain;background-position:0 0;}
           .ico-email:before {width:20px;height:21px;background-image:url(/images/icon/icon_email.png);}
+
+          a {display:inline-block;vertical-align:middle;}
         }
       }
     }
@@ -552,7 +554,6 @@ body {
 
 
     @media (max-width: 48rem){
-      padding: 2rem 1.3rem;
       .about-profile {flex-direction:column;}
       .about-section-list {padding-left:0;}
       .about-section .skills-list {padding-left:0;}

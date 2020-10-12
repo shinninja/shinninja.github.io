@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <title></title>
+  <script>
+
+// 감싸는 모듈
+let myApp = {
+
+    // 생성자 함수
+    Create: function(name) {
+        this.name = name;
+        this.getName = function() {
+            return this.name;
+        }
+    },
+
+    Parent : function () {
+        // Constructor
+        function Parent(name) {
+        this.name = name;
+        }
+    
+        // method
+        Parent.prototype.sayHi = function () {
+        console.log('Hi! ' + this.name);
+        };
+    
+        // return constructor
+        return Parent;
+    }());
+};
+
+// 인스턴스 생성
+let item = new myApp.Create('나는 멋쟁이');
+
+// 생성한 이름 가져오기
+console.log(item.getName());
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
