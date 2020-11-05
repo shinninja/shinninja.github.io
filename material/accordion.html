@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Accordion</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/contents.css">
+
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/ui.js"></script>
+</head>
+
+<body>
+	<div class="material-container">
+		<h1>Accordion</h1>
+
+		<ul class="accordion_list">
+			<li class="js-accordion__item">
+				<button type="button" class="js-accordion__btn">메뉴1</button>
+				<ul class="depth2 js-accordion__panel">
+					<li><a href="javascript:;" class="menu_txt">메뉴1 - 서브메뉴1</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴1 - 서브메뉴2</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴1 - 서브메뉴3</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴1 - 서브메뉴4</a></li>
+				</ul>
+			</li>
+			<li class="js-accordion__item">
+				<button type="button" class="js-accordion__btn">메뉴2</button>
+				<ul class="depth2 js-accordion__panel">
+					<li><a href="javascript:;" class="menu_txt">메뉴2 - 서브메뉴1</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴2 - 서브메뉴2</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴2 - 서브메뉴3</a></li>
+					<li><a href="javascript:;" class="menu_txt">메뉴2 - 서브메뉴4</a></li>
+				</ul>
+			</li>
+			<li class="js-accordion__item">
+				<a href="javascript:;" class="js-accordion__btn">메뉴3</a>
+			</li>
+		</ul>
+	</div>
+
+	<script>
+		// new Accordion('.accordion_list');
+		new Accordion({
+			wrap: '.accordion_list',
+			single: false
+		});
+	</script>
+</body>
+
+</html>
