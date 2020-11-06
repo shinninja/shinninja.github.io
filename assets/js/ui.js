@@ -48,40 +48,45 @@ var Accordion = (function(){
             item: '.js-accordion__item',
             panel: '.js-accordion__panel',
             active_class: 'active',
-            single: true
+            multiple: false
         }, params);
+        this.$wrap = $(this.options.wrap);
         this.init();
     } 
 
     Accordion.prototype.init = function(){
         var self = this;
-        $(self.options.btn).on('click', function(){
-            var $item = $(this).parent(self.options.item);
-            var $panel = $(this).next(self.options.panel);
-            var isOpen = $panel.is(':visible');
 
-            // $panel[isOpen ? 'slideUp' : 'slideDown']().trigger(isOpen ? 'hide' : 'show');
-
-            if (self.options.single == false) {
-                if(isOpen){
-                    $item.removeClass(self.options.active_class);
-                    $panel.slideUp();
-                }else{
-                    $item.addClass(self.options.active_class);
-                    $panel.slideDown();
+        this.$wrap.find(self.options.btn).each(function(){
+            $(this).on('click', function(){
+                var $item = $(this).parent(self.options.item);
+                var $panel = $(this).next(self.options.panel);
+                var isOpen = $panel.is(':visible');
+    
+                // $panel[isOpen ? 'slideUp' : 'slideDown']().trigger(isOpen ? 'hide' : 'show');
+    
+                if (self.options.multiple == true) {
+                    if(isOpen){
+                        $item.removeClass(self.options.active_class);
+                        $panel.slideUp();
+                    }else{
+                        $item.addClass(self.options.active_class);
+                        $panel.slideDown();
+                    }
+                } else {
+                    if(isOpen){
+                        $item.removeClass(self.options.active_class);
+                        $panel.slideUp();
+                    }else{
+                        $(self.options.wrap).find(self.options.item).removeClass(self.options.active_class);
+                        $(self.options.wrap).find(self.options.panel).slideUp();
+                        $item.addClass(self.options.active_class);
+                        $panel.slideDown();
+                    }
                 }
-            } else {
-                if(isOpen){
-                    $item.removeClass(self.options.active_class);
-                    $panel.slideUp();
-                }else{
-                    $(self.options.wrap).find(self.options.item).removeClass(self.options.active_class);
-                    $(self.options.wrap).find(self.options.panel).slideUp();
-                    $item.addClass(self.options.active_class);
-                    $panel.slideDown();
-                }
-            }
+            });
         });
+        
     }
     return Accordion;
 }());

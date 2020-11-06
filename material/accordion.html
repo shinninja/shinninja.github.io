@@ -19,7 +19,35 @@
 	<div class="material-container">
 		<h1>Accordion</h1>
 
-		<ul class="accordion_list">
+		<p>option - single</p>
+		<ul class="accordion_list" id="accordionSingle">
+			<li class="js-accordion__item">
+				<button type="button" class="js-accordion__btn">Menu1</button>
+				<ul class="depth2 js-accordion__panel">
+					<li><a href="javascript:;" class="menu_txt">Menu1 - Sub Menu1</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu1 - Sub Menu2</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu1 - Sub Menu3</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu1 - Sub Menu4</a></li>
+				</ul>
+			</li>
+			<li class="js-accordion__item">
+				<button type="button" class="js-accordion__btn">Menu2</button>
+				<ul class="depth2 js-accordion__panel">
+					<li><a href="javascript:;" class="menu_txt">Menu2 - Sub Menu1</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu2 - Sub Menu2</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu2 - Sub Menu3</a></li>
+					<li><a href="javascript:;" class="menu_txt">Menu2 - Sub Menu4</a></li>
+				</ul>
+			</li>
+			<li class="js-accordion__item">
+				<a href="javascript:;" class="js-accordion__btn">Menu3</a>
+			</li>
+		</ul>
+
+		<hr class="divider">
+
+		<p>option - multiple</p>
+		<ul class="accordion_list" id="accordionMultiple">
 			<li class="js-accordion__item">
 				<button type="button" class="js-accordion__btn">Menu1</button>
 				<ul class="depth2 js-accordion__panel">
@@ -45,10 +73,13 @@
 	</div>
 
 	<script>
-		// new Accordion('.accordion_list');
 		new Accordion({
-			wrap: '.accordion_list',
-			single: false
+			wrap: '#accordionSingle',
+		});
+
+		new Accordion({
+			wrap: '#accordionMultiple',
+			multiple: true
 		});
 	</script>
 </body>
