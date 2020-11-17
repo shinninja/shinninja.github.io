@@ -5,7 +5,8 @@
    ========================================================================== */
 .material-wrap {position:relative;height:100vh;padding:20px;color:#fff;background:#06163e;font-family:'Roboto Mono', monospace;}
 .material-list {display:flex;flex-wrap:wrap;}
-.material-box {overflow:hidden;padding:30px;border:1px solid #71a6ff;border-radius:10px;color:#ccc;}
+.material-item {margin:10px;}
+.material-box {overflow:hidden;width:400px;padding:30px;border:1px solid #71a6ff;border-radius:10px;color:#ccc;}
 .material-img {margin-bottom:20px;}
 .material-inner {position:relative;min-height:44px;}
 .material-inner__tit {padding-top:10px;font-size:24px;}
@@ -65,7 +66,7 @@ accordion
 
 /* tab - box fill */
 .tabBoxFill .jsTabHead {display:table;width:100%;border-bottom:2px solid #000;margin-bottom:40px;}
-.tabBoxFill .jsTabHead > li {display:table-cell;float:none;height:56px;min-width:373px;}
+.tabBoxFill .jsTabHead > li {display:table-cell;float:none;height:56px;width:calc(100% / 3);}
 .tabBoxFill .jsTabHead > li a {display:block;text-align:center;border-top:1px solid #ebebeb;border-right:1px solid #ebebeb;line-height:55px;color:#030000;font-size:16px;}
 .tabBoxFill .jsTabHead > li:first-child a {border-left:1px solid #ebebeb;}
 .tabBoxFill .jsTabHead > li.on a {background:#000;color:#fff;font-weight:bold;border-color:#000;}

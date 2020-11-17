@@ -38,7 +38,7 @@ var NINJA = {
 }
 
 var Accordion = (function(){
-    function Accordion(params) {
+    function Accordion(params){
         // if(this.length === 0) return this;
 
         // options
@@ -47,7 +47,7 @@ var Accordion = (function(){
             btn: '.js-accordion__btn',
             item: '.js-accordion__item',
             panel: '.js-accordion__panel',
-            active_class: 'active',
+            activeClass: 'active',
             multiple: false
         }, params);
         this.$wrap = $(this.options.wrap);
@@ -63,24 +63,22 @@ var Accordion = (function(){
                 var $panel = $(this).next(self.options.panel);
                 var isOpen = $panel.is(':visible');
     
-                // $panel[isOpen ? 'slideUp' : 'slideDown']().trigger(isOpen ? 'hide' : 'show');
-    
                 if (self.options.multiple == true) {
                     if(isOpen){
-                        $item.removeClass(self.options.active_class);
+                        $item.removeClass(self.options.activeClass);
                         $panel.slideUp();
                     }else{
-                        $item.addClass(self.options.active_class);
+                        $item.addClass(self.options.activeClass);
                         $panel.slideDown();
                     }
                 } else {
                     if(isOpen){
-                        $item.removeClass(self.options.active_class);
+                        $item.removeClass(self.options.activeClass);
                         $panel.slideUp();
                     }else{
-                        $(self.options.wrap).find(self.options.item).removeClass(self.options.active_class);
+                        $(self.options.wrap).find(self.options.item).removeClass(self.options.activeClass);
                         $(self.options.wrap).find(self.options.panel).slideUp();
-                        $item.addClass(self.options.active_class);
+                        $item.addClass(self.options.activeClass);
                         $panel.slideDown();
                     }
                 }
@@ -89,4 +87,31 @@ var Accordion = (function(){
         
     }
     return Accordion;
+}());
+
+var Tabs = (function(){
+    function Tabs(prams){
+        // options
+        this.options = $.extend({
+            wrap: null,
+            btn: '.js-tabs__btn',
+            panel: '.js-tabs__panel',
+            activeClass: 'active',
+            activePanel: 1
+        });
+        this.$wrap = $(this.options.wrap);
+        this.init();
+    }
+
+    Tabs.prototype.init = function(){
+        var self = this;
+
+        self.$wrap.find(self.options.btn).on('click', function(e){
+            e.preventDefault();
+
+            $(this).addClass(self.options.activeClass);
+        });
+
+    }
+    return Tabs;
 }());

@@ -4,8 +4,10 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Tab</title>
 <meta name="description" content="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/reset.css">
 <link rel="stylesheet" href="../assets/css/contents.css">
 
@@ -15,11 +17,11 @@
 </head>
 
 <body>
-	<div class="materialWrap">
+	<div class="material-container">
 		<h1>Tab</h1>
-
+		<!-- https://codepen.io/recordboy/pen/BOrqWo -->
 		<h2>Tab - Full</h2>
-		<div class="tabBoxFill jsTabWrap" id="jsTabWrap1">
+		<div class="tabBoxFill" id="tabBoxFill">
 			<ul class="jsTabHead">
 				<li class="on"><a href="javascript:#tabCont01">Tab01</a></li>
 				<li><a href="javascript:#tabCont02">Tab02</a></li>
@@ -32,7 +34,9 @@
 
 			<div id="tabCont03" class="jsTabCont">tabCont03</div>
 		</div>
+
 		<br>
+
 		<div class="tabBoxFill jsTabWrap" id="jsTabWrap2">
 			<ul class="jsTabHead">
 				<li><a href="javascript:#tabCont01">Tab01</a></li>
@@ -78,8 +82,11 @@
 	</div>
 
 	<script>
-		NINJA.UI.tabsType01('#jsTabWrap1');
-		NINJA.UI.tabsType01('#jsTabWrap2');
+		// NINJA.UI.tabsType01('#jsTabWrap1');
+		// NINJA.UI.tabsType01('#jsTabWrap2');
+		new Tabs({
+			wrap: '#tabBoxFill',
+		});
 	</script>
 </body>
 
