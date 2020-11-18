@@ -5,12 +5,17 @@
    ========================================================================== */
 .material-wrap {position:relative;height:100vh;padding:20px;color:#fff;background:#06163e;font-family:'Roboto Mono', monospace;}
 .material-list {display:flex;flex-wrap:wrap;}
-.material-item {margin:10px;}
-.material-box {overflow:hidden;width:400px;padding:30px;border:1px solid #71a6ff;border-radius:10px;color:#ccc;}
+.material-item {flex:auto;margin:10px;width:25%;max-width:400px;padding:30px;border:1px solid #71a6ff;border-radius:10px;}
+.material-box {overflow:hidden;color:#ccc;}
 .material-img {margin-bottom:20px;}
+.material-img img {width:100%;}
 .material-inner {position:relative;min-height:44px;}
 .material-inner__tit {padding-top:10px;font-size:24px;}
 .material-inner .btn {position:absolute;top:0;right:0;}
+@media screen and (max-width:768px) {
+    .material-item {width:50%;max-width:100%;}
+    .material-inner__tit {padding-top:0;font-size:5vw;}
+}
 
 /* ==========================================================================
    head
