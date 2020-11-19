@@ -21,44 +21,28 @@
 		<h1>Tab</h1>
 		<!-- https://codepen.io/recordboy/pen/BOrqWo -->
 		<h2>Tab - Full</h2>
-		<div class="tabBoxFill" id="tabBoxFill">
-			<ul class="jsTabHead">
-				<li class="on"><a href="javascript:#tabCont01">Tab01</a></li>
-				<li><a href="javascript:#tabCont02">Tab02</a></li>
-				<li><a href="javascript:#tabCont03">Tab03</a></li>
+		<div class="tab-wrap" id="tab1">
+			<ul class="tab-head tab-head--fill">
+				<li class="active"><a href="javascript:#tabCont01" class="js-tabs__btn">Tab01</a></li>
+				<li><a href="javascript:#tabCont02" class="js-tabs__btn">Tab02</a></li>
+				<li><a href="javascript:#tabCont03" class="js-tabs__btn">Tab03</a></li>
 			</ul>
 
-			<div id="tabCont01" class="jsTabCont on">tabCont01</div>
+			<div id="tabCont01" class="tab-panel js-tabs__panel active">tabCont01</div>
 
-			<div id="tabCont02" class="jsTabCont">tabCont02</div>
+			<div id="tabCont02" class="tab-panel js-tabs__panel">tabCont02</div>
 
-			<div id="tabCont03" class="jsTabCont">tabCont03</div>
-		</div>
-
-		<br>
-
-		<div class="tabBoxFill jsTabWrap" id="jsTabWrap2">
-			<ul class="jsTabHead">
-				<li><a href="javascript:#tabCont01">Tab01</a></li>
-				<li class="on"><a href="javascript:#tabCont02">Tab02</a></li>
-				<li><a href="javascript:#tabCont03">Tab03</a></li>
-			</ul>
-
-			<div id="tabCont01-01" class="jsTabCont">tabCont01</div>
-
-			<div id="tabCont01-02" class="jsTabCont on">tabCont02</div>
-
-			<div id="tabCont01-03" class="jsTabCont">tabCont03</div>
+			<div id="tabCont03" class="tab-panel js-tabs__panel">tabCont03</div>
 		</div>
 
 		<hr class="divider">
 
 		<h2>Tab - Line</h2>
-		<div class="tabBoxLine jsTabWrap">
-			<ul class="jsTabHead">
-				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont1')" class="on">Tab01</button></li>
-				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont2')">Tab02</button></li>
-				<li><button type="button" onclick="NINJA.UI.tabsType02(this, '#tabBoxLineCont3')">Tab03</button></li>
+		<div class="tab-wrap">
+			<ul class="tab-head tab-head--line">
+				<li class="active"><a href="javascript:#tabBoxLineCont1" class="js-tabs__btn">Tab01</a></li>
+				<li><a href="javascript:#tabBoxLineCont2" class="js-tabs__btn">Tab02</a></li>
+				<li><a href="javascript:#tabBoxLineCont3" class="js-tabs__btn">Tab03</a></li>
 			</ul>
 
 			<div class="jsTabCont">
@@ -82,10 +66,8 @@
 	</div>
 
 	<script>
-		// NINJA.UI.tabsType01('#jsTabWrap1');
-		// NINJA.UI.tabsType01('#jsTabWrap2');
 		new Tabs({
-			wrap: '#tabBoxFill',
+			wrap: '#tab1'
 		});
 	</script>
 </body>

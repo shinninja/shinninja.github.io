@@ -7,8 +7,8 @@
 .material-list {display:flex;flex-wrap:wrap;}
 .material-item {flex:auto;margin:10px;width:25%;max-width:400px;padding:30px;border:1px solid #71a6ff;border-radius:10px;}
 .material-box {overflow:hidden;color:#ccc;}
-.material-img {margin-bottom:20px;}
-.material-img img {width:100%;}
+.material-img {position:relative;overflow:hidden;max-height:187px;margin-bottom:20px;padding-bottom:56%;}
+.material-img img {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
 .material-inner {position:relative;min-height:44px;}
 .material-inner__tit {padding-top:10px;font-size:24px;}
 .material-inner .btn {position:absolute;top:0;right:0;}
@@ -64,24 +64,24 @@ accordion
 /* ==========================================================================
    tab 
    ========================================================================== */
-.jsTabWrap .jsTabHead:after {clear:both;display:block;content:"";}
-.jsTabWrap .jsTabHead > li {float:left;}
-.jsTabWrap .jsTabCont {display:none;}
-.jsTabWrap .jsTabCont.on {display:block;}
+.tab-head:after {clear:both;display:block;content:"";}
+.tab-head > li {float:left;}
+.tab-panel {display:none;}
+.tab-panel.active {display:block;}
 
 /* tab - box fill */
-.tabBoxFill .jsTabHead {display:table;width:100%;border-bottom:2px solid #000;margin-bottom:40px;}
-.tabBoxFill .jsTabHead > li {display:table-cell;float:none;height:56px;width:calc(100% / 3);}
-.tabBoxFill .jsTabHead > li a {display:block;text-align:center;border-top:1px solid #ebebeb;border-right:1px solid #ebebeb;line-height:55px;color:#030000;font-size:16px;}
-.tabBoxFill .jsTabHead > li:first-child a {border-left:1px solid #ebebeb;}
-.tabBoxFill .jsTabHead > li.on a {background:#000;color:#fff;font-weight:bold;border-color:#000;}
+.tab-head--fill {display:table;width:100%;border-bottom:2px solid #000;margin-bottom:40px;}
+.tab-head--fill > li {display:table-cell;float:none;height:56px;width:calc(100% / 3);}
+.tab-head--fill > li a {display:block;text-align:center;border-top:1px solid #ebebeb;border-right:1px solid #ebebeb;line-height:55px;color:#030000;font-size:16px;}
+.tab-head--fill > li:first-child a {border-left:1px solid #ebebeb;}
+.tab-head--fill > li.active a {background:#000;color:#fff;font-weight:bold;border-color:#000;}
 
 /* tab - box line */
-.tabBoxLine .jsTabHead {border-bottom:1px solid #000;margin-bottom:40px;}
-.tabBoxLine .jsTabHead > li {position:relative;height:56px;width:250px;margin-left:-1px;}
-.tabBoxLine .jsTabHead > li:first-of-type {margin-left:0;}
-.tabBoxLine .jsTabHead > li button {position:relative;display:block;width:100%;color:#030000;line-height:55px;font-size:16px;border:1px solid #ebebeb;border-bottom:none;}
-.tabBoxLine .jsTabHead > li button.on {border-color:#000;border-bottom:1px solid #fff;z-index:1;}
+.tab-head--line {border-bottom:1px solid #000;margin-bottom:40px;}
+.tab-head--line > li {position:relative;height:56px;width:250px;margin-left:-1px;}
+.tab-head--line > li:first-of-type {margin-left:0;}
+.tab-head--line > li button {position:relative;display:block;width:100%;color:#030000;line-height:55px;font-size:16px;border:1px solid #ebebeb;border-bottom:none;}
+.tab-head--line > li button.on {border-color:#000;border-bottom:1px solid #fff;z-index:1;}
 
 /* tab - inline text */
 .tabInlineText .jsTabHead {margin-bottom:25px;}

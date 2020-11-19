@@ -90,7 +90,7 @@ var Accordion = (function(){
 }());
 
 var Tabs = (function(){
-    function Tabs(prams){
+    function Tabs(params){
         // options
         this.options = $.extend({
             wrap: null,
@@ -98,7 +98,7 @@ var Tabs = (function(){
             panel: '.js-tabs__panel',
             activeClass: 'active',
             activePanel: 1
-        });
+        }, params);
         this.$wrap = $(this.options.wrap);
         this.init();
     }
@@ -109,7 +109,7 @@ var Tabs = (function(){
         self.$wrap.find(self.options.btn).on('click', function(e){
             e.preventDefault();
 
-            $(this).addClass(self.options.activeClass);
+            $(this).parent().addClass(self.options.activeClass);
         });
 
     }
