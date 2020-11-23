@@ -90,17 +90,17 @@ var Tabs = (function(){
     }
 
     Tabs.prototype.set = function(){
-        $(this.options.btn).parent().eq(this.options.activePanel).addClass(this.options.activeClass);
-        $(this.options.panel).eq(this.options.activePanel).addClass(this.options.activeClass);
+        this.$wrap.find(this.options.btn).parent().eq(this.options.activePanel).addClass(this.options.activeClass);
+        this.$wrap.find(this.options.panel).eq(this.options.activePanel).addClass(this.options.activeClass);
     }
 
     Tabs.prototype.initEvt = function(tabBtn){
         var idx = tabBtn.parent().index();
 
-        $(this.options.btn).parent().siblings().removeClass(this.options.activeClass);
+        this.$wrap.find(this.options.btn).parent().siblings().removeClass(this.options.activeClass);
         tabBtn.parent().addClass(this.options.activeClass);
 
-        $(this.options.panel).removeClass(this.options.activeClass).eq(idx).addClass(this.options.activeClass);
+        this.$wrap.find(this.options.panel).removeClass(this.options.activeClass).eq(idx).addClass(this.options.activeClass);
     }
     return Tabs;
 }());

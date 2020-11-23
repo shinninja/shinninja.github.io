@@ -38,15 +38,15 @@
 		<hr class="divider">
 
 		<h2>Tab - Line</h2>
-		<div class="tab-wrap">
+		<div class="tab-wrap" id="tab2">
 			<ul class="tab-head tab-head--line">
-				<li class="active"><a href="javascript:#tabBoxLineCont1" class="js-tabs__btn">Tab01</a></li>
+				<li><a href="javascript:#tabBoxLineCont1" class="js-tabs__btn">Tab01</a></li>
 				<li><a href="javascript:#tabBoxLineCont2" class="js-tabs__btn">Tab02</a></li>
 				<li><a href="javascript:#tabBoxLineCont3" class="js-tabs__btn">Tab03</a></li>
 			</ul>
 
-			<div class="jsTabCont">
-				<div class="tabCont on" id="tabBoxLineCont1">
+			<div class="tab-panel-wrap">
+				<div class="tab-panel js-tabs__panel" id="tabBoxLineCont1">
 					tabCont01
 					<ul class="listStar">
 						<li>list 1</li>
@@ -54,11 +54,11 @@
 					</ul>
 				</div>
 
-				<div class="tabCont" id="tabBoxLineCont2">
+				<div class="tab-panel js-tabs__panel" id="tabBoxLineCont2">
 					tabCont02
 				</div>
 
-				<div class="tabCont" id="tabBoxLineCont3">
+				<div class="tab-panel js-tabs__panel" id="tabBoxLineCont3">
 					tabCont03
 				</div>
 			</div>
@@ -68,6 +68,10 @@
 	<script>
 		new Tabs({
 			wrap: '#tab1'
+		});
+
+		new Tabs({
+			wrap: '#tab2'
 		});
 	</script>
 </body>
