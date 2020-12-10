@@ -3,63 +3,6 @@
 $(function () {
 });
 
-/* Accordion */
-var Accordion = (function(){
-    function Accordion(params){
-        // if(this.length === 0) return this;
-
-        // options
-        this.options = $.extend({
-            wrap: null,
-            btn: '.js-accordion__btn',
-            item: '.js-accordion__item',
-            panel: '.js-accordion__panel',
-            activeClass: 'active',
-            multiple: false
-        }, params);
-        this.$wrap = $(this.options.wrap);
-        this.init();
-    } 
-
-    Accordion.prototype.init = function(){
-        var self = this;
-
-        this.$wrap.find(self.options.btn).each(function(){
-            $(this).on('click', function(){
-                var $item = $(this).parent(self.options.item);
-                var $panel = $(this).next(self.options.panel);
-                var isOpen = $panel.is(':visible');
-
-                if (self.options.multiple == true) {
-                    if(isOpen){
-                        self.hide($item, $panel);
-                    }else{
-                        self.show($item, $panel);
-                    }
-                } else {
-                    if(isOpen){
-                        self.hide($item, $panel);
-                    }else{
-                        $(self.options.wrap).find(self.options.item).removeClass(self.options.activeClass);
-                        $(self.options.wrap).find(self.options.panel).slideUp();
-                        self.show($item, $panel);
-                    }
-                }
-            });
-        });
-        
-    }
-    Accordion.prototype.hide = function($item, $panel){
-        $item.removeClass(this.options.activeClass);
-        $panel.slideUp();
-    }
-    Accordion.prototype.show = function($item, $panel){
-        $item.addClass(this.options.activeClass);
-        $panel.slideDown();
-    }
-    return Accordion;
-}());
-
 /* Tabs */
 var Tabs = (function(){
     function Tabs(params){
@@ -103,4 +46,61 @@ var Tabs = (function(){
         this.$wrap.find(this.options.panel).removeClass(this.options.activeClass).eq(idx).addClass(this.options.activeClass);
     }
     return Tabs;
+}());
+
+/* Accordion */
+var Accordion = (function(){
+    function Accordion(params){
+        // if(this.length === 0) return this;
+
+        // options
+        this.options = $.extend({
+            wrap: null,
+            btn: '.js-accordion__btn',
+            item: '.js-accordion__item',
+            panel: '.js-accordion__panel',
+            activeClass: 'active',
+            multiple: false
+        }, params);
+        this.$wrap = $(this.options.wrap);
+        this.init();
+    } 
+
+    Accordion.prototype.init = function(){
+        var self = this;
+
+        this.$wrap.find(self.options.btn).each(function(){
+            $(this).on('click', function(){
+                var $item = $(this).closest(self.options.item);
+                var $panel = $item.find(self.options.panel);
+                var isOpen = $panel.is(':visible');
+
+                if (self.options.multiple == true) {
+                    if(isOpen){
+                        self.hide($item, $panel);
+                    }else{
+                        self.show($item, $panel);
+                    }
+                } else {
+                    if(isOpen){
+                        self.hide($item, $panel);
+                    }else{
+                        $(self.options.wrap).find(self.options.item).removeClass(self.options.activeClass);
+                        $(self.options.wrap).find(self.options.panel).slideUp();
+                        self.show($item, $panel);
+                    }
+                }
+            });
+        });
+        
+    }
+    Accordion.prototype.hide = function($item, $panel){
+        $item.removeClass(this.options.activeClass);
+        $panel.slideUp();
+    }
+    Accordion.prototype.show = function($item, $panel){
+        $item.addClass(this.options.activeClass);
+        $panel.slideDown();
+    }
+    return Accordion;
 }());
