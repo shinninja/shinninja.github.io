@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>To do List</title>
+<meta name="description" content="">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+<script defer type="text/javascript" src="vanilla.js"></script>
+<style>
+    * {margin:0;padding:0;}
+    html, body {font-family: 'Nanum Brush Script', 'Nanum Pen Script', cursive;}
+    ul, li {list-style:none;}
+    button {border:none;cursor:pointer;}
+    h1 {padding:50px 0 40px;text-align:center;font-size:50px;background-color: #E1F5FE;color:#fff;text-shadow: 4px 4px 0px #bdbdbd;}
+    .todoWrap {width:500px;margin:40px auto 0;border:1px solid #ddd;}
+    .todoWrap input[type="text"] {width:100%;height:50px;line-height:50px;border:none;box-sizing:border-box;font-size:32px;text-indent:10px;font-family:inherit;}
+    .todoWrap input[type="text"]::placeholder {color:#eee;font-size:42px;}
+    .todoWrap input[type="text"]:focus {outline:none !important;}
+    .todoWrap .todoList > li {position:relative;height:60px;padding:0 10px;line-height:60px;}
+    .todoWrap .todoList > li input[type="checkbox"] {position:relative;top:-3px;width:15px;height:15px;}
+    .todoWrap .todoList > li input[type="checkbox"] + label {padding-left:10px;}
+    .todoWrap .todoList > li .btn_del {position:absolute;top:50%;right:10px;display:block;padding:0 10px;height:30px;text-align:center;background-color:coral;color:#fff;border-radius:5px;transform:translateY(-50%);}
+    .todoWrap .todoList > li.completed label {text-decoration:line-through;color:#d9d9d9;}
+
+    .wrap {position:relative;padding-top:100px;}
+    .wrap:before {content:"";position:absolute;top:0;left:0;width:100%;height:340px;background:#E1F5FE;z-index:-1;}
+    .wrap .todoTop {margin-bottom:30px;text-align:center;}
+    .wrap .todoTop .date {font-size:64px;color:#555;}
+    .wrap .todoTop .remain {margin-top:20px;font-size:32px;color:lightcoral;}
+    .wrap .todoTop .remain .todoCnt {}
+    .wrap .todoWrap {padding:50px 30px;margin:0 auto;border-radius:30px;background:#fff;border:none;
+        -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.32);
+        -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.32);
+        box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.32);
+    }
+    .wrap .todoWrap .todoList > li {font-size:32px;}
+    .wrap .todoWrap .todoList > li:first-of-type {margin-top:20px;}
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="todoTop">
+            <p class="date"></p>
+            <p class="remain">할 일 <span class="todoCnt">0</span>개 남음</p>
+        </div>
+
+        <div class="todoWrap">
+            <input type="text" value="" id="todoInput" placeholder="What needs to be done?">
+            <ul class="todoList" id="todoList">
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="todoWrap">
+        <input type="text" value="" id="todoInput" placeholder="What needs to be done?" onkeyup="runApp.action.evtKeyup(event);">
+        <ul class="todoList" id="todoList">
+        </ul>
+    </div> -->
+
+    <!-- <div class="todoWrap">
+        <input type="text" value="" id="todoInput" placeholder="What needs to be done?" onkeyup="enterKey();">
+        <ul class="todoList" id="todoList">
+        </ul>
+    </div> -->
+
+</body>
+
+</html>
