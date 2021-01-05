@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Watched / Computed | Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+            .division {margin-top:10px;}
+            .list {width:400px;border:1px solid #ccc;border-collapse:collapse;}
+            .list th,
+            .list td {border:1px solid #ccc;text-align:center;}
+            .list thead tr {color:blanchedalmond;background-color:blueviolet;}
+        </style>
+        </style>
+    </head>
+
+    <body>
+        <div id="exampleWatch">
+            <h3>watch</h3>
+            x : <input type="text" v-model="x"><br>
+            y : <input type="text" v-model="y"><br>
+            덧셈 결과 : {{ sum }}
+        </div>
+        <br>
+        <div id="exampleComputed">
+            <h3>computed</h3>
+            x : <input type="text" v-model="x"><br>
+            y : <input type="text" v-model="y"><br>
+            덧셈 결과 : {{ sum2 }}
+        </div>
+
+        <script>
+            const watch = new Vue({
+                el: '#exampleWatch',
+                data: { x:0, y:0, sum:0 },
+                watch : {
+                    x : function(v){
+                        console.log('## x 변경');
+                        var result = Number(v) + Number(this.y);
+                        if(isNaN(result)) this.sum = 0;
+                        else    this.sum = result;
+                    },
+                    y : function(v){
+                        console.log('## y 변경');
+                        this.y = v;
+                        var result = Number(this.x) + Number(v);
+                        if(isNaN(result)) this.sum = 0;
+                        else    this.sum = result;
+                    }
+                }
+            });
+
+            const computed = new Vue({
+                el: '#exampleComputed',
+                data: { x:0, y:0, sum:0 },
+                computed: {
+                    sum2: function(){
+                        var result = Number(this.x) + Number(this.y);
+                        if(isNaN(result)) return 0;
+                        else    return result;
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>

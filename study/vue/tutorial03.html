@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- <script src="https://unpkg.com/vue"></script> -->
+        <style>
+            .division {margin-top:10px;}
+        </style>
+    </head>
+
+    <body>
+        <div id="exMessage">
+            <p>원본 메시지 : {{ message }}</p>
+            <p>역순으로 표시한 메시지 : {{ reversedMessage }}</p>
+            <p>뒤집힌 메시지 : {{ reversedMessage2() }}</p>
+            <p>{{ message.split('').reverse().join('') }}</p>
+            <p v-once>다시는 변경하지 않습니다. {{ message }}</p>
+        </div>
+
+        <script>
+            var exMessage = new Vue({
+                el: '#exMessage',
+                data: {
+                    message: 'Hello Wrold'
+                },
+                computed: {
+                    reversedMessage: function(){
+                        return this.message.split('').reverse().join('');
+                    }
+                },
+                methods: {
+                    reversedMessage2: function(){
+                        return this.message.split('').reverse().join('');
+                    }
+                }
+            });
+        </script>
+
+        <hr>
+
+        <div id="exComputed">
+            <input type="text" v-model="num"><br>
+            1부터 입력된 수까지의 합 : <span>{{ sum }}</span>
+        </div>
+
+        <script>
+            //1부터 입력된 수까지의 합구하기
+            var exComputed = new Vue({
+                el: '#exComputed',
+                data: { num: 0 },
+                computed: {
+                    sum : function(){
+                        var n = Number(this.num);
+                        console.log(n);
+                        if(Number.isNaN(n) || n < 1) return 0;
+                        return ((1+n) * n) / 2;
+                    }
+                }
+            });
+        </script>
+
+        <hr>
+    </body>
+</html>

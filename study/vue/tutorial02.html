@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- <script src="https://unpkg.com/vue"></script> -->
+        <style>
+            .division {margin-top:10px;}
+        </style>
+    </head>
+
+    <body>
+        <div id="simple">
+            <input type="text" v-model="name" placeholder="이름을 입력하세요">
+            <p v-html="name"></p>
+        </div>
+
+        <script>
+            var twoway = new Vue({
+                el: '#simple',
+                data: {
+                    name: ''
+                }
+            });
+        </script>
+
+        <hr>
+
+        <div id="fruitsWrap1">
+            <p>좋아하는 과일을 모두 골라주세요 : </p>
+            <!-- <span><input type="checkbox" value="1" id="fruits1"><label for="fruits1" v-model="fruits">사과</label></span>,
+            <span><input type="checkbox" value="2" id="fruits2"><label for="fruits2" v-model="fruits">키위</label></span>,
+            <span><input type="checkbox" value="3" id="fruits3"><label for="fruits3" v-model="fruits">포도</label></span>,
+            <span><input type="checkbox" value="4" id="fruits4"><label for="fruits4" v-model="fruits">수박</label></span>,
+            <span><input type="checkbox" value="5" id="fruits5"><label for="fruits5" v-model="fruits">참외</label></span> -->
+            <span><input type="checkbox" value="1" v-model="fruits">사과</span>,
+            <span><input type="checkbox" value="2" v-model="fruits">키위</span>,
+            <span><input type="checkbox" value="3" v-model="fruits">포도</span>,
+            <span><input type="checkbox" value="4" v-model="fruits">수박</span>,
+            <span><input type="checkbox" value="5" v-model="fruits">참외</span>
+        </div>
+
+        <div id="fruitsWrap2">
+            선택한 과일들 : <span v-html="fruits"></span>
+        </div>
+
+        <script>
+            var model = {
+                fruits : []
+            }
+            var fruits1 = new Vue({
+                el: '#fruitsWrap1',
+                data: model
+            });
+            var fruits2 = new Vue({
+                el: '#fruitsWrap2',
+                data: model
+            });
+        </script>
+
+        <hr>
+
+        <div id="simpleAccount">
+            예금액 : <input type="number" v-model="amount">
+            <img v-if="amount < 0" src="/assets/images/icon/error.png" alt="마이너스는 허용하지 않습니다." style="width:15px;height:15px;vertical-align:middle;">
+        </div>
+
+        <script>
+            var simpleAccount = new Vue({
+                el : '#simpleAccount',
+                data: {
+                    amount: 0
+                }
+            });
+        </script>
+
+        <hr>
+
+        <div id="account">
+            <div>잔고 : <input type="number" v-model="balance"></div>
+            <div>회원님의 등급 :
+                <span v-if="balance >= 1000000">Gold</span>
+                <span v-else-if="balance >= 500000">Silver</span>
+                <span v-else-if="balance >= 200000">Bronze</span>
+                <span v-else>Basic</span>
+            </div>
+        </div>
+
+        <script>
+            var account = new Vue({
+                el : '#account',
+                data: {
+                    balance: 0
+                }
+            });
+        </script>
+
+        <hr>
+        <style>
+            .list {width:400px;border:1px solid #ccc;border-collapse:collapse;}
+            .list th,
+            .list td {border:1px solid #ccc;text-align:center;}
+            .list thead tr {color:blanchedalmond;background-color:blueviolet;}
+            .divider {height:2px;background-color:#ddd;}
+        </style>
+        <div id="exTable">
+            <table id="list" class="list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>전화번호</th>
+                        <th>주소</th>
+                    </tr>
+                </thead>
+                <tbody id="contacts">
+                    <tr v-for="contact in contacts" v-if="contact.address.indexOf('서울') > -1">
+                        <td>{{ contact.no }}</td>
+                        <td>{{ contact.name }}</td>
+                        <td>{{ contact.tel }}</td>
+                        <td>{{ contact.address }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <br>
+
+        <div id="exTable2">
+            <table id="list2" class="list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>전화번호</th>
+                        <th>주소</th>
+                    </tr>
+                </thead>
+                <tbody id="contacts2">
+                    <template v-for="(contact, index) in contacts">
+                        <tr>
+                            <td>{{ index+1 }}</td>
+                            <td>{{ contact.name }}</td>
+                            <td>{{ contact.tel }}</td>
+                            <td>{{ contact.address }}</td>
+                        </tr>
+                        <tr class="divider" v-if="index % 5 === 4">
+                            <td colspan="4"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            var model = {
+                'pageno': 1,
+                'pagesize': 10,
+                'totalcount': 100,
+                'contacts' : [
+                    { 'no': 100, 'name': '설현', 'tel': '010-3456-8299', 'address': '서울' },
+                    { 'no': 99, 'name': '혜리', 'tel': '010-3456-8299', 'address': '서울' },
+                    { 'no': 98, 'name': '하니', 'tel': '010-3456-8299', 'address': '경기' },
+                    { 'no': 97, 'name': '성소', 'tel': '010-3456-8299', 'address': '제주' },
+                    { 'no': 96, 'name': '지아', 'tel': '010-3456-8299', 'address': '서울' },
+                    { 'no': 95, 'name': '정연', 'tel': '010-3456-8299', 'address': '강원' },
+                    { 'no': 94, 'name': '쯔위', 'tel': '010-3456-8299', 'address': '경기' },
+                    { 'no': 93, 'name': '사나', 'tel': '010-3456-8299', 'address': '서울' },
+                    { 'no': 92, 'name': '모모', 'tel': '010-3456-8299', 'address': '충남' },
+                    { 'no': 91, 'name': '소진', 'tel': '010-3456-8299', 'address': '서울' },
+                ]
+            }
+
+            var list = new Vue({
+                el: '#exTable',
+                data: model
+            });
+
+            var list2 = new Vue({
+                el: '#exTable2',
+                data: model
+            });
+        </script>
+
+        <hr>
+
+        <div id="exSelect">
+            <select id="regions">
+                <option disabled="disabled" selected>지역을 선택하세요</option>
+                <option v-for="(value, key, index) in regions" :value="key">{{ index+1 }} : {{ value }}</option>
+            </select>
+        </div>
+
+        <script>
+            var regions = {
+                'A' : 'Asia',
+                'B' : 'America',
+                'C' : 'Europe',
+                'D' : 'Africa',
+                'E' : 'Oceania',
+            };
+
+            var regions = new Vue({
+                el: '#regions',
+                data: {regions: regions}
+            });
+        </script>
+
+        <hr>
+
+        <div id="">
+
+        </div>
+
+        <script></script>
+    </body>
+</html>

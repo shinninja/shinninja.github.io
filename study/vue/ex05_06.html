@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>클래스 바인딩 | Vue</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+        <style>
+            .set1 {background-color:aqua;color:purple;}
+            .set2 {text-align:center;width:120px;}
+            .set3 {border:sandybrown dashed 1px;}
+        </style>
+    </head>
+
+    <body>
+        <div id="example" >
+            <button type="button" id="btn1" v-bind:class="mystyle">버튼1</button>
+            <div>
+                <input type="checkbox" v-model="mystyle.set1" id="mystyle1" value="true"><label for="mystyle1">set1 디자인</label><br>
+                <input type="checkbox" v-model="mystyle.set2" id="mystyle2" value="true"><label for="mystyle2">set2 디자인</label><br>
+                <input type="checkbox" v-model="mystyle.set3" id="mystyle3" value="true"><label for="mystyle3">set3 디자인</label>
+            </div>
+        </div>
+
+        <script>
+            const vm = new Vue({
+                el: '#example',
+                data: {
+                    mystyle : {
+                        set1 : false,
+                        set2 : false,
+                        set3 : false
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>

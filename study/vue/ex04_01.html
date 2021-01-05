@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>인라인 이벤트 | Vue</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+            .layout1 {margin:30px;}
+        </style>
+        </style>
+    </head>
+
+    <body>
+        <div id="example" class="container layout1">
+            <p><input type="text" v-model="amount" class="form-control"></p>
+            <div>
+                <button type="button" id="deposit" @click="balance += parseInt(amount)" class="btn btn-primary">예금</button>
+                <button type="button" id="withdraw" @click="balance -= parseInt(amount)" class="btn btn-primary">인출</button>
+            </div>
+            <h3>계좌 잔고 : {{ balance }}</h3>
+        </div>
+
+
+        <script>
+            const vm = new Vue({
+                el: '#example',
+                data: {
+                    amount: 0,
+                    balance: 0,
+                }
+            });
+        </script>
+
+    </body>
+</html>

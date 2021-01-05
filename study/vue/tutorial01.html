@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- <script src="https://unpkg.com/vue"></script> -->
+        <style>
+            .division {margin-top:10px;}
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <p>{{ message }}</p>
+            <div class="division">
+                <input v-model="message">
+            </div>
+
+            <p v-if="seen">Now you see me</p>
+
+            <ol>
+                <li v-for="todo in todos">{{ todo.text }}</li>
+            </ol>
+
+            <button v-on:click="reverseMessage">Reverse Message</button>
+            <button v-on:click="hideMessage">Hide Message</button>
+            <button v-on:click="pushTodo">Push Todos</button>
+
+            <ol>
+                <todo-item></todo-item>
+            </ol>
+
+            <ol>
+                <todo-item--2
+                    v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+                </todo-item--2>
+            </ol>
+        </div>
+
+        <script>
+            Vue.component('todo-item', {
+                template: '<li>This is a todo</li>'
+            });
+
+            Vue.component('todo-item--2', {
+                props: ['todo'],
+                template: '<li>{{ todo.text }}</li>'
+            });
+
+            const app = new Vue({
+                el : '#app',
+                data : {
+                    message : 'Hello Vue.js!',
+                    seen: true,
+                    todos: [
+                        { text: 'Learn JavaScript' },
+                        { text: 'Learn Vue' },
+                        { text: 'Build someting awesome' }
+                    ],
+                    groceryList: [
+                        { id: 0, text: 'Vegetables' },
+                        { id: 1, text: 'Cheese' },
+                        { id: 3, text: 'Whatever else humans are supposed to eat' }
+                    ]
+                },
+                methods : {
+                    reverseMessage: function(){
+                        this.message = this.message.split('').reverse().join('');
+                    },
+                    hideMessage: function(){
+                        this.seen = false;
+                    },
+                    pushTodo: function(){
+                        this.todos.push({ text: 'New item' });
+                    }
+                },
+            });
+
+            // app.message = 'I have changed the data!';
+            // app.seen = false;
+            // app.todos.push({ text: 'New item' });
+        </script>
+
+        <hr>
+
+        <div id="app2">
+            <ol>
+                <li v-for="todo in todos">{{ todo.text }}</li>
+            </ol>
+        </div>
+        <script>
+            const app2 = new Vue({
+                el: '#app2',
+                data: {
+                    todos: [
+                        { text: 'Javascript 배우기' },
+                        { text: 'Vue 배우기' },
+                        { text: '무언가 멋진 것을 만들기' }
+                    ]
+                }
+            });
+        </script>
+    </body>
+</html>

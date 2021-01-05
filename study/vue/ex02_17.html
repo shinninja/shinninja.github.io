@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+            .division {margin-top:10px;}
+            .list {width:400px;border:1px solid #ccc;border-collapse:collapse;}
+            .list th,
+            .list td {border:1px solid #ccc;text-align:center;}
+            .list thead tr {color:blanchedalmond;background-color:blueviolet;}
+        </style>
+        </style>
+    </head>
+
+    <body>
+        <div id="example">
+            <p>국가명 : <input type="text" placeholder="국가명" :value="countryregion" @input="nameChanged"></p>
+            <table id="list" class="list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>국가명</th>
+                        <th>수도</th>
+                        <th>지역</th>
+                    </tr>
+                </thead>
+                <tbody id="contacts">
+                    <tr v-for="country in filtered">
+                        <td>{{ country.no }}</td>
+                        <td>{{ country.name }}</td>
+                        <td>{{ country.capital }}</td>
+                        <td>{{ country.region }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            const model = {
+                countryregion: '',
+                countries: [
+                    { no:1, name:'미국', capital:'워싱턴DC', region:'america' },
+                    { no:2, name:'프랑스', capital:'파리', region:'europe' },
+                    { no:3, name:'영국', capital:'런던', region:'europe' },
+                    { no:4, name:'중국', capital:'베이징', region:'asia' },
+                    { no:5, name:'태국', capital:'방콕', region:'asia' },
+                    { no:6, name:'모로코', capital:'라바트', region:'africa' },
+                    { no:7, name:'라오스', capital:'비엔티안', region:'asia' },
+                    { no:8, name:'베트남', capital:'하노이', region:'asia' },
+                    { no:9, name:'피지', capital:'수바', region:'oceania' },
+                    { no:10, name:'솔로몬 제도', capital:'호니아라', region:'oceania' },
+                    { no:11, name:'자메이카', capital:'킹스턴', region:'america' },
+                    { no:12, name:'나미비아', capital:'빈트우크', region:'africa' },
+                    { no:13, name:'동티모르', capital:'딜리', region:'asia' },
+                    { no:14, name:'멕시코', capital:'멕시코시티', region:'america' },
+                    { no:15, name:'베네수엘라', capital:'카라카스', region:'america' },
+                    { no:16, name:'서사모아', capital:'아피아', region:'oceania' }
+                ]
+            }
+            const list = new Vue({
+                el: '#example',
+                data: model,
+                computed: {
+                    filtered: function(){
+                        let cregion = this.countryregion.trim();
+                        return this.countries.filter(function(item, index){
+                            // console.log(item.name);
+                            if(item.region.indexOf(cregion) > -1){
+                                return true;
+                            }
+                        })
+                    }
+                },
+                methods: {
+                    nameChanged : function(e){
+                        this.countryregion = e.target.value;
+                    }
+                }
+            });
+            
+            console.log(list.countries[1].name = "스위스");
+            console.log(model.countries[1].name = "독일");
+            console.log(list.$data.countries[1].name = "스페인");
+            /*
+            * data 옵션은 Vue 인스턴스가 관찰하는 데이터 객체를 의미하므로 변경 사항은 즉시 감지된다.
+            */
+        </script>
+
+    </body>
+</html>

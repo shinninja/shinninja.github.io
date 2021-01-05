@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+            .division {margin-top:10px;}
+            .list {width:400px;border:1px solid #ccc;border-collapse:collapse;}
+            .list th,
+            .list td {border:1px solid #ccc;text-align:center;}
+            .list thead tr {color:blanchedalmond;background-color:blueviolet;}
+        </style>
+        </style>
+    </head>
+
+    <body>
+        <div id="sum">
+            <input type="text" v-model="num">
+            <p>1부터 입력된 수까지의 합 : <span>{{ sum }}</span></p>
+        </div>
+
+        <div id="sum2">
+            금액 : <span>{{ amount }} 원</span>
+        </div>
+
+        <script>
+            //1부터 입력된 수까지의 합 구하기
+            const sum = new Vue({
+                el: '#sum',
+                data: { num : 0 },
+                computed: {
+                    sum:function(){
+                        console.log(Date.now());
+                        var n = Number(this.num);
+                        if(Number.isNaN(n) || n < 1) return 0;
+                        return ((1+n) * n) / 2;
+                    }
+                }
+            });
+
+            const sum2 = new Vue({
+                el: '#sum2', 
+                data : { amt : 1234567 },
+                computed : {
+                    amount : {
+                        get : function(){
+                            var s = new String('' + this.amt);
+                            var result = '';
+                            var num = 0;
+                            for (var i=s.length-1; i>=0; i--){
+                                result = s[i] + result;
+                                if(num % 3 == 2 && i == 0)
+                                    result = ',' + result;
+                                num++;
+
+                                return result;
+                            }
+                        },
+                        set : function(amt){    
+                            if(typeof(amt) == 'string'){
+                                var result = parseInt(amt.replace(/, /g, ''))
+                                if(isNaN(result)) this.amt = 0;
+                                else    this.amt = result;
+                            } else if(typeof(amt) == 'number')
+                                this.amt = amt;
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>

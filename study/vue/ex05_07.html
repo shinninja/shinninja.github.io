@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>클래스 바인딩 | Vue</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+        <style>
+            .score {border:1px solid #000;}
+            .warning {background-color:orange;color:purple;}
+            .warnimage {width:18px;height:18px;position:relative;}
+        </style>
+    </head>
+
+    <body>
+        <div id="example" >
+            <div>
+                <p>1부터 100까지만 입력가능합니다.</p>
+                <div>
+                    접수 : <input type="text" class="score" v-model="score" v-bind:class="info">
+                    <img src="/assets/images/icon/error.png" class="warnimage" v-show="info.warning">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const vm = new Vue({
+                el: '#example',
+                data: {
+                    score:0
+                },
+                computed: {
+                    info: function(){
+                        if(this.score >= 1 && this.score <= 100)
+                            return {warning:false};
+                        else
+                            return {warning:true};
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>
