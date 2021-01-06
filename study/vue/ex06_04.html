@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Component | Vue</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <template id="helloTemplate">
+                <div>hello world!!!</div>
+            </template>
+        </div>
+
+        <script>
+            Vue.component('hello-component', {
+                template : '#helloTemplate'
+            })
+
+            const v = new Vue({
+                el: '#app'
+            })
+        </script>
+
+    </body>
+</html>

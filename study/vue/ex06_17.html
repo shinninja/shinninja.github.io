@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Component | Vue</title>
+        <meta name="description" content="">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+        <style>
+            .division {margin-top:10px;}
+            .list {width:400px;border:1px solid #ccc;border-collapse:collapse;}
+            .list th,
+            .list td {border:1px solid #ccc;text-align:center;}
+            .list td {padding:10px;font-size:12px;}
+            .list thead tr {color:blanchedalmond;background-color:blueviolet;}
+            [v-cloak] {display:none;}
+        </style>
+    </head>
+
+    <body>
+        <template id="listTemplate">
+            <div>
+                <table id="list" class="list">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>이름</th>
+                            <th>전화번호</th>
+                            <th>주소</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contacts">
+                        <tr v-for="contact in contacts">
+                            <td>{{ contact.no }}</td>
+                            <td>{{ contact.name }}</td>
+                            <td>{{ contact.tel }}</td>
+                            <td>{{ contact.address }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+        <div id="app">
+            <h1>예방 접종</h1>
+            <hr>
+            <h3>1차 대상자 : 5월 1~3일</h3>
+            <contactlist-component :contacts="list1"></contactlist-component>
+            <h3>2차 대상자 : 5월 13~15일</h3>
+            <contactlist-component :contacts="list2"></contactlist-component>
+        </div>
+
+        <script>
+            Vue.component('contactlist-component', {
+                template: '#listTemplate',
+                props : [ 'contacts' ]
+            });
+
+            Vue.config.devtools = true
+            const vm = new Vue({
+                el: '#app',
+                data: {
+                    list1: [
+                        { 'no':97, 'name':'Kalisa Rogers', 'tel':'010-3456-8296', 'address':'서울시' },
+                        { 'no':96, 'name':'Jesse James', 'tel':'010-3456-8296', 'address':'서울시' },
+                        { 'no':95, 'name':'Jennifer Walker', 'tel':'010-3456-8296', 'address':'서울시' },
+                    ],
+                    list2: [
+                        { 'no':82, 'name':'Zenon Howard', 'tel':'010-3456-8296', 'address':'서울시' },
+                        { 'no':81, 'name':'Kylie Allen', 'tel':'010-3456-8296', 'address':'서울시' }
+                    ]
+                }
+            })
+        </script>
+
+    </body>
+</html>

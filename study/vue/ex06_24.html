@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Component | Vue</title>
+        <meta name="description" content="">
+        <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+    </head>
+    
+    <!-- 이벤트 버스 객체 -->
+    <script type="text/javascript">
+        const eventBus = new Vue();
+    </script>
+
+    <!-- ST: 첫 번째 자식 Component -->
+    <template id="child1Template">
+        <div>
+            <button type="button" @click="clickEvent">child1 button!</button>
+            <div>{{ currenTime }}</div>
+        </div>
+    </template>
+    <script type="text/javascript">
+        Vue.component('child1-component', {
+            template: '#child1Template',
+            data: function(){
+                return { currenTime : '' };
+            },
+            methods: {
+                clickEvent: function(){
+                    let d = new Date();
+                    let t = d.toLocaleTimeString() + ' ' + d.getMilliseconds() + 'ms';
+                    eventBus.$emit('click1', t);
+                    this.currenTime = t;
+                }
+            },
+        })
+    </script>
+    <!-- EN: 첫 번째 자식 Component -->
+
+    <!-- ST: 두 번째 자식 Component -->
+    <template id="child2Template">
+        <ul>
+            <li v-for="t in timelist">{{ t }}</li>
+        </ul>
+    </template>
+    <script>
+        Vue.component('child2-component', {
+            template: '#child2Template',
+            data: function(){
+                return { timelist: [] }
+            },
+            created: function(){
+                eventBus.$on('click1', this.child1Click);
+            },
+            methods: {
+                child1Click : function(time){
+                    this.timelist.push(time);
+                }
+            },
+        })
+    </script>
+    <!-- EN: 두 번째 자식 Component -->
+    <body>
+        <div id="app">
+            <child1-component></child1-component>
+            <child2-component></child2-component>
+        </div>
+        <script>
+            Vue.config.devtools = true;
+            const vm = new Vue({
+                el: '#app'
+            })
+        </script>
+    </body>
+</html>
