@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>TodoList | Vue</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+        <style>
+            * {box-sizing:border-box;}
+            .header {margin-bottom:20px;padding:30px;background-color:beige;color:darksalmon;text-align:center;}
+            .input-wrap {position:relative;padding-right:60px;}
+            .input-wrap .btn {position:absolute;top:0;right:0;}
+            .todolist {margin:0;padding:0;}
+            .todolist > li {position:relative;padding:8px 8px 8px 40px;background:#eee;font-size:14px;cursor:pointer;transition:0.2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;list-style:none;}
+            .todolist > li:hover {background-color:#ddd;}
+            .todolist > li.checked {background-color:#bbb;color:#fff;text-decoration:line-through;}
+            .todolist > li.checked:before {content:"";position:absolute;top:10px;left:16px;height:8px;width:8px;border-color:#fff;border-style:solid;border-width:0px 1px 1px 0px;transform:rotate(45deg);}
+            .btn-close {position:absolute;top:0;right:0;height:36px;padding:0 16px;border:none;font-size:16px;background-color:transparent;}
+            .btn-close:hover {background-color:#f44336;color:#fff;}
+            /* .close {position:absolute;top:0;right:0;padding:8px 16px;}
+            .close:hover {background-color:#f44336;color:#fff;} */
+            .completed {text-decoration:none;}
+        </style>
+    </head>
+
+    <body>
+        <div id="todolistapp" class="container">
+            <div id="header" class="header">
+                <h2>Todo List App</h2>
+                <div class="input-wrap">
+                    <input type="text" class="form-control" id="task" placeholder="입력 후 엔터!" v-model.trim="todo" v-on:keyup.enter="addTodo">
+                    <button type="button" class="btn btn-primary" @click="addTodo">추가</button>
+                </div>
+            </div>
+
+            <ul id="todolist" class="todolist">
+                <li v-for="list in todolist" v-bind:class="checked(list.done)" @click="doneToggle(list.id)">
+                    <span>{{ list.todo }}</span>
+                    <span v-if="list.done">(완료)</span>
+                    <button class="btn-close" @click.stop="deleteTodo(list.id);">&#x00D7;</button>
+                    <!-- <span class="close" @click.stop="deleteTodo(list.id);">&#x00D7;</span> -->
+                </li>
+                <!-- <li>
+                    <span>Task 1</span>
+                    <span class="close">&#x00D7;</span>
+                </li>
+                <li class="checked">
+                    <span>Task 2</span>
+                    <span>(완료)</span>
+                    <span class="close">&#x00D7;</span>
+                </li>
+                <li>
+                    <span>Task 3</span>
+                    <span class="close">&#x00D7;</span>
+                </li> -->
+            </ul>
+        </div>
+
+        <script>
+            const todolistApp = new Vue({
+                el: '#todolistapp',
+                data: {
+                    todo: '',
+                    todolist: [
+                        { id:1, todo: 'JS 공부하기', done: false },
+                        { id:2, todo: 'Vue 공부하기', done: false },
+                        { id:3, todo: '빨래하기', done: true },
+                        { id:4, todo: '청소하기', done: false }
+                    ]
+                },
+                methods: {
+                    checked : function(done){
+                        if (done) return { checked:true };
+                        else    return { checked:false };
+                    },
+                    addTodo: function(e){
+                        if (this.todo.trim() !== ''){
+                            this.todolist.push({
+                                id: new Date().getTime(),
+                                todo: this.todo.trim(),
+                                done: false
+                            })
+                        }
+                        this.todo = '';
+                    },
+                    deleteTodo : function(id){
+                        let index = this.todolist.findIndex(function(item){
+                            return item.id === id;
+                        })
+                        console.log(index);
+                        this.todolist.splice(index, 1);
+                        
+                    },
+                    doneToggle: function(id){
+                        let index = this.todolist.findIndex(function(item){
+                            return item.id === id;
+                        })
+                        this.todolist[index].done = !this.todolist[index].done;
+                    }
+                },
+            })
+        </script>
+
+    </body>
+</html>

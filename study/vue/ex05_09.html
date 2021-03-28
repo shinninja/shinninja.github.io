@@ -86,6 +86,7 @@
                         var index = this.todolist.findIndex(function(item){
                             return item.id === id;
                         })
+                        console.log(index);
                         this.todolist.splice(index, 1);
                     },
                     doneToggle: function(id){
